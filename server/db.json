@@ -1,0 +1,24 @@
+{
+  "Posts": [
+    {
+      "id": 2,
+      "title": "t-shirt white",
+      "description": "this t-shirt is fantastic"
+    },
+    {
+      "id": 3,
+      "title": "blue Jeans",
+      "description": "the blue jeans are the best"
+    },
+    {
+      "title": "Prueba post",
+      "description": "pequeña description",
+      "id": 4
+    },
+    {
+      "title": "okay",
+      "description": "ufff",
+      "id": 5
+    }
+  ]
+}
