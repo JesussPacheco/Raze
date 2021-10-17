@@ -1,0 +1,25 @@
+
+.rounded{
+  border-radius: 50px!important;
+}
+.green{
+  background-color: #78BCC4;
+}
+.red{
+  background-color: #ea0000;
+}
+.size{
+  width: 75%;
+}
+.center {
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+.right{
+  display: flex;
+  height: auto;
+  justify-content: right;
+  align-items: center;
+}

@@ -1,0 +1,37 @@
+<div>
+  <div class="center">
+    <div *ngIf="!submitted" class="size">
+      <mat-card>
+        <mat-card-title>New Outfit</mat-card-title>
+        <mat-card-content>
+          <div>
+            <mat-label>Image</mat-label><br>
+            <input type="file" [(ngModel)]="outfit.img" name="img"><br><br>
+          </div>
+          <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input required matInput placeholder="Title" required [(ngModel)]="outfit.name" name="title">
+          </mat-form-field><br>
+          <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <input required matInput placeholder="Description" [(ngModel)]="outfit.description" name="description">
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions class="right">
+          <button mat-button class="rounded red" routerLink="/outfits">Cancel</button>
+          <button mat-button (click)="saveTutorial()" class="rounded green">Public</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="center">
+      <div *ngIf="submitted">
+        <mat-card>
+          <mat-card-title>Outfit was submitted successfully!</mat-card-title>
+          <mat-card-actions class="right">
+            <button mat-button class="rounded green" (click)="newPost()" routerLink="/outfits">OK</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

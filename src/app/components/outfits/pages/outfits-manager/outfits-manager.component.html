@@ -1,0 +1,35 @@
+<div>
+  <div>
+    <div class="center">
+      <input class=" form-control rounded size" type="text" placeholder="Search by title" [(ngModel)]="name"/>
+
+      <button mat-icon-button (click)="searchTitle()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+    <div class="center">
+      <button mat-icon-button routerLink="/addOutfit">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div class="flex-container">
+      <div class="flex-items" *ngFor="let outfit of outfits; let i = index" [class.active]="i == currentIndex"
+           (click)="setActiveTutorial(outfit, i)">
+        <mat-card>
+          <mat-card-title>{{outfit.name}}</mat-card-title>
+          <img mat-card-lg-image src="{{outfit.img}}">
+          <mat-card-content>
+            <span>{{outfit.description}}</span>
+          </mat-card-content>
+          <mat-card-actions class="right">
+            <button mat-icon-button routerLink="/outfit/{{ currentOutfit.id}}">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,12 +9,18 @@ import { PostsManagerComponent } from './components/posts/pages/posts-manager/po
 import { PostItemComponent } from './components/posts/pages/post-item/post-item.component';
 import { AddPostComponent } from './components/posts/pages/add-post/add-post.component';
 import {FormsModule} from "@angular/forms";
+import { OutfitsManagerComponent } from './components/outfits/pages/outfits-manager/outfits-manager.component';
+import { OutfitsItemComponent } from './components/outfits/pages/outfits-item/outfits-item.component';
+import { AddOutfitComponent } from './components/outfits/pages/add-outfit/add-outfit.component';
 @NgModule({
   declarations: [
     AppComponent,
     PostsManagerComponent,
     PostItemComponent,
-    AddPostComponent
+    AddPostComponent,
+    OutfitsManagerComponent,
+    OutfitsItemComponent,
+    AddOutfitComponent
   ],
   imports: [
     BrowserModule,

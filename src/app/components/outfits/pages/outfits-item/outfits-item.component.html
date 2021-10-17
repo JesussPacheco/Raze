@@ -1,0 +1,31 @@
+<div>
+  <div *ngIf="currentOutfit.id" class="center">
+    <div>
+      <button mat-icon-button routerLink="/outfits">
+        <mat-icon>keyboard_return</mat-icon>
+      </button>
+    </div>
+    <mat-card>
+      <mat-card-title>Edit Outfit</mat-card-title>
+      <img mat-card-image src="{{currentOutfit.img}}">
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Title</mat-label>
+          <input matInput [(ngModel)]="currentOutfit.name" name="title">
+        </mat-form-field><br>
+        <mat-form-field appearance="outline">
+          <mat-label>Description</mat-label>
+          <textarea matInput [(ngModel)]="currentOutfit.description" name="description"></textarea>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions class="right">
+        <button mat-icon-button class="red" (click)="deleteTutorial()" routerLink="/outfits">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button type="submit" class="green" (click)="updateTutorial()" routerLink="/outfits">
+          <mat-icon>done</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
