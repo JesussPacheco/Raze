@@ -1,0 +1,26 @@
+.submit-form {
+  max-width: 400px;
+  margin: auto;
+}
+.addbtn{
+  margin-left: 25%;
+}
+.confirmation-text{
+  text-align: center;
+}
+.title-css{
+  margin-top: 20%;
+}
+.add-new{
+  text-align: center;
+}
+.btn-light{
+  background-color: #78BCC4;
+  color: #FFFFFF;
+  margin-left: 20%;
+  margin-top: 10px;
+}
+.continue-btn{
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

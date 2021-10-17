@@ -1,0 +1,37 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group title-css">
+        <h4 class="add-new">New Interest</h4><br>
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="interest.title"
+          name="title"/>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="interest.description"
+          name="description"/>
+      </div>
+
+      <button (click)="saveInterest()" class="btn btn-light">Save</button>
+      <a href="#" class="btn btn-light">Cancel</a>
+    </div>
+
+    <div *ngIf="submitted">
+      <br>
+      <h4 class="confirmation-text">Your interest was submitted successfully!</h4>
+      <br>
+      <a href="#" class="btn btn-light continue-btn">Continue</a>
+    </div>
+  </div>
+</div>

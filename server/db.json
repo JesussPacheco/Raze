@@ -1,24 +1,22 @@
 {
-  "Posts": [
+  "interest": [
     {
-      "id": 2,
-      "title": "t-shirt white",
-      "description": "this t-shirt is fantastic"
+      "title": "Casual",
+      "description": "Ropa informal",
+      "published": true,
+      "id": 1
     },
     {
-      "id": 3,
-      "title": "blue Jeans",
-      "description": "the blue jeans are the best"
+      "title": "Sport",
+      "description": "Ropa deportiva",
+      "published": true,
+      "id": 2
     },
     {
-      "title": "Prueba post",
-      "description": "pequeña description",
-      "id": 4
-    },
-    {
-      "title": "okay",
-      "description": "ufff",
-      "id": 5
+      "title": "Formal",
+      "description": "Ropa formal y elegante",
+      "published": true,
+      "id": 3
     }
   ]
 }

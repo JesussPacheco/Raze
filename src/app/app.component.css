@@ -1,6 +1,6 @@
-.example-spacer {
-  flex: 1 1 auto;
+.navbar-brand{
+  color: #F7F8F3;
 }
-.toolbar{
-  background:#F7444E ;
+.navbar{
+  background-color: #F7444E;
 }

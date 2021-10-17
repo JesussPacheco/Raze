@@ -1,0 +1,55 @@
+<div>
+  <div *ngIf="currentInterest.id" class="edit-form">
+    <h4 class="beg-text">Interest</h4>
+    <form>
+      <div class="form-group sec-text">
+        <label for="title"><strong>Title</strong></label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentInterest.title"
+          name="title"/>
+      </div>
+
+      <div class="form-group">
+        <label for="description"><strong>Description</strong></label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentInterest.description"
+          name="description"/>
+      </div>
+
+      <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentInterest.published ? "Published" : "Pending" }}
+      </div>
+    </form>
+
+    <button
+      class="btn btn-light"
+      *ngIf="currentInterest.published"
+      (click)="updatePublished(false)">UnPublish</button>
+
+    <button
+      *ngIf="!currentInterest.published"
+      class="btn btn-light"
+      (click)="updatePublished(true)">Publish</button>
+
+    <button class="btn btn-light wb2" (click)="deleteInterest()">Delete</button>
+
+    <button
+      type="submit"
+      class="btn btn-light wb2"
+      (click)="updateInterest()">Update</button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentInterest.id">
+    <br />
+    <p>Not found</p>
+  </div>
+</div>
+
