@@ -1,5 +1,33 @@
-.list {
-  text-align: left;
-  max-width: 750px;
-  margin: auto;
+.rounded{
+  border-radius: 50px!important;
+}
+.green{
+  background-color: #78BCC4;
+}
+.size{
+  width: 30%;
+}
+.center {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.right{
+  display: flex;
+  height: auto;
+  justify-content: right;
+  align-items: center;
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-items{
+  max-width: 30%;
+  margin-bottom: 40px;
 }

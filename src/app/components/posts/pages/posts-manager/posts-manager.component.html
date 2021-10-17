@@ -1,42 +1,34 @@
-<div class="list row">
-  <div class="col-md-8">
-    <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Search by title" [(ngModel)]="title"/>
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button" (click)="searchTitle()">
-          Search
-        </button>
-      </div>
+<div>
+  <div>
+    <div class="center">
+      <input class=" form-control rounded size" type="text" placeholder="Search by title" [(ngModel)]="title"/>
+
+      <button mat-icon-button (click)="searchTitle()">
+        <mat-icon>search</mat-icon>
+      </button>
     </div>
   </div>
-  <div class="col-md-6">
+  <div>
     <h4>Tutorials List</h4>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let post of posts; let i = index" [class.active]="i == currentIndex"
+    <div class="flex-container">
+      <div class="flex-items" *ngFor="let post of posts; let i = index" [class.active]="i == currentIndex"
         (click)="setActiveTutorial(post, i)">
-        {{ post.title }}
-      </li>
-    </ul>
-  </div>
-  <div class="col-md-6">
-    <div *ngIf="currentPost.id">
-      <h4>Tutorial</h4>
-      <div>
-        <label><strong>Title:</strong></label> {{ currentPost.title }}
+        <mat-card>
+          <mat-card-title>{{post.title}}</mat-card-title>
+          <img mat-card-image src="{{post.img}}">
+          <mat-card-content>
+            <span>{{post.description}}</span>
+          </mat-card-content>
+          <mat-card-actions class="right">
+            <button mat-icon-button routerLink="/post/{{ currentPost.id }}">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-button class="rounded green" routerLink="/post/{{ currentPost.id }}">
+              contact
+            </button>
+          </mat-card-actions>
+        </mat-card>
       </div>
-      <div>
-        <label><strong>Description:</strong></label>
-        {{ currentPost.description }}
-      </div>
-
-      <a class="badge badge-warning" routerLink="/post/{{ currentPost.id }}">
-        Edit
-      </a>
-    </div>
-
-    <div *ngIf="!currentPost">
-      <br />
-      <p>Please click on a Tutorial...</p>
     </div>
   </div>
 </div>

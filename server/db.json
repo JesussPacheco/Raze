@@ -3,30 +3,30 @@
     {
       "id": 2,
       "title": "t-shirt white",
-      "img": "",
+      "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "this t-shirt is fantastic"
     },
     {
       "id": 3,
       "title": "blue Jeans",
-      "img": "",
+      "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "the blue jeans are the best"
     },
     {
       "title": "Prueba post",
-      "img": "",
+      "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "pequeña description",
       "id": 4
     },
     {
       "title": "okay",
-      "img": "",
+      "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "ufff",
       "id": 5
     },
     {
       "title": "hola",
-      "img": "C:\\fakepath\\imagen_2.jpg",
+      "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "hi",
       "id": 6
     }
