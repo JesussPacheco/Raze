@@ -1,27 +1,36 @@
 <div>
-  <div class="submit-form">
-    <div *ngIf="!submitted">
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" required [(ngModel)]="post.title" name="title"/>
-      </div>
-
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input type="file" class="form-control" id="img" [(ngModel)]="post.img" name="img"/>
-      </div>
-
-      <div class="form-group">
-        <label for="description">Description</label>
-        <input class="form-control" id="description" required [(ngModel)]="post.description" name="description"/>
-      </div>
-
-      <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+  <div class="center">
+    <div *ngIf="!submitted" class="size">
+      <mat-card>
+        <mat-card-title>New Post</mat-card-title>
+        <mat-card-content>
+          <div>
+            <mat-label>Image</mat-label><br>
+            <input type="file" [(ngModel)]="post.img" name="img"><br><br>
+          </div>
+          <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input required matInput placeholder="Title" required [(ngModel)]="post.title" name="title">
+          </mat-form-field><br>
+          <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+            <input required matInput placeholder="Description" [(ngModel)]="post.description" name="description">
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions class="right">
+          <button mat-button (click)="saveTutorial()" class="rounded green">Public</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
-
-    <div *ngIf="submitted">
-      <h4>Tutorial was submitted successfully!</h4>
-      <button class="btn btn-success" (click)="newPost()">Add</button>
+    <div class="center">
+      <div *ngIf="submitted">
+        <mat-card>
+          <mat-card-title>Tutorial was submitted successfully!</mat-card-title>
+          <mat-card-actions class="right">
+            <button mat-button class="green" (click)="newPost()" routerLink="/posts">OK</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
   </div>
 </div>
