@@ -1,4 +1,35 @@
-.edit-form {
-  max-width: 400px;
-  margin: auto;
+.rounded{
+  border-radius: 50px!important;
 }
+.green{
+  background-color: #17ff34;
+}
+.red{
+  background-color: #fd0000;
+}
+.size{
+  width: 30%;
+}
+.center {
+  display: flex;
+  height: 900px;
+  justify-content: center;
+  align-items: center;
+}
+.right{
+  display: flex;
+  height: auto;
+  justify-content: right;
+  align-items: center;
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-items{
+  margin-bottom: 40px;
+}
+

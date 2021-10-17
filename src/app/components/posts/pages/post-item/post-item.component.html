@@ -1,45 +1,31 @@
 <div>
-  <div *ngIf="currentPost.id" class="edit-form">
-    <h4>Tutorial</h4>
-    <form>
-      <div class="form-group">
-        <label for="title">Title</label>
-        <input
-          type="text"
-          class="form-control"
-          id="title"
-          [(ngModel)]="currentPost.title"
-          name="title"
-        />
-      </div>
-      <div class="form-group">
-        <label for="description">Description</label>
-        <input
-          type="text"
-          class="form-control"
-          id="description"
-          [(ngModel)]="currentPost.description"
-          name="description"
-        />
-      </div>
-    </form>
-
-    <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
-      Delete
-    </button>
-
-    <button
-      type="submit"
-      class="badge badge-success mb-2"
-      (click)="updateTutorial()"
-    >
-      Update
-    </button>
-    <p>{{ message }}</p>
-  </div>
-
-  <div *ngIf="!currentPost.id">
-    <br />
-    <p>Cannot access this Tutorial...</p>
+  <div *ngIf="currentPost.id" class="center">
+    <div>
+      <button mat-icon-button routerLink="/posts">
+        <mat-icon>keyboard_return</mat-icon>
+      </button>
+    </div>
+    <mat-card>
+      <mat-card-title>Edit Post</mat-card-title>
+      <img mat-card-image src="{{currentPost.img}}">
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Title</mat-label>
+          <input matInput [(ngModel)]="currentPost.title" name="title">
+        </mat-form-field><br>
+        <mat-form-field appearance="outline">
+          <mat-label>Description</mat-label>
+          <textarea matInput [(ngModel)]="currentPost.description" name="description"></textarea>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions class="right">
+        <button mat-icon-button class="red" (click)="deleteTutorial()" routerLink="/posts">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button type="submit" class="green" (click)="updateTutorial()" routerLink="/posts">
+          <mat-icon>done</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>
