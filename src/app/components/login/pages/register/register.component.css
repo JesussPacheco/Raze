@@ -1,0 +1,77 @@
+.back-arrow{
+  display: flex;
+  margin-top: 2%;
+  margin-left: 7%;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #002C3E;
+  padding: 6px 18px;
+  font-size: 13px;
+  background: #002C3E;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.back-arrow p, .back-arrow mat-icon{
+  margin: 0;
+  padding: 0;
+}
+.card{
+  max-width: 600px;
+  margin: 2em auto;
+  text-align: center;
+
+}
+
+.header{
+  text-align: center;
+}
+
+.full-width{
+  width: 80%;
+}
+
+.forgot-password{
+  padding-left: 0;
+}
+
+.first-name-input{
+  padding-top: 10px;
+}
+.buttons{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.button{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #002C3E;
+  padding: 6px 24px;
+  font-size: 13px;
+  background: #002C3E;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.secondary-button{
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #002C3E;
+  padding: 6px 24px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.mat-form-field-flex{
+  background: white;
+}
+.radio-group{
+  justify-content: space-evenly;
+}
+mat-radio-button{
+  margin: 20px;
+}
