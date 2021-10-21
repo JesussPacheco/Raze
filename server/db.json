@@ -20,5 +20,28 @@
       "description": "ufff",
       "id": 5
     }
+  ],
+
+  "Outfit-types": [
+    {
+      "Id": 1,
+      "title":"Casual",
+      "description":"It's perfect to special events"
+    },
+    {
+      "Id": 2,
+      "title":"Casual",
+      "description":"It's perfect to special events"
+    },
+    {
+      "Id": 3,
+      "title":"Classic",
+      "description":"It's perfect to special events"
+    },
+    {
+      "Id": 4,
+      "title":"Sport",
+      "description":"It's perfect to special events"
+    }
   ]
 }
