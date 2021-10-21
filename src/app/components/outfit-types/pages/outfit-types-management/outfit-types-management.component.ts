@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {OutfitType} from "../../model/outfit-type";
+import {OutfitTypesService} from "../../services/outfit-types.service";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-outfit-types-management',
@@ -6,10 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./outfit-types-management.component.css']
 })
 export class OutfitTypesManagementComponent implements OnInit {
+  outfitTypes:OutfitType[];
+  title = 'Card View Demo';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  gridColumns = 3;
+  constructor(private OutfitTypesService:OutfitTypesService,public dialog: MatDialog) {
+    this.outfitTypes=[] as OutfitType[]
   }
 
+  ngOnInit(): void {
+    this.retrieveOutfitsTypes();
+  }
+  retrieveOutfitsTypes():void{
+    this.OutfitTypesService.getAll().
+    subscribe(data=>{
+        console.log(data);
+        this.outfitTypes=data;
+      },
+      error => {console.log(error)} )
+  }
 }

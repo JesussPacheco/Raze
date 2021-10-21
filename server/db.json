@@ -26,22 +26,39 @@
     {
       "Id": 1,
       "title":"Casual",
-      "description":"It's perfect to special events"
+      "description":"It's perfect to special events",
+      "urlToImage":"https://aws.glamour.mx/prod/designs/v1/assets/560x560/247280.jpg"
     },
     {
       "Id": 2,
-      "title":"Casual",
-      "description":"It's perfect to special events"
+      "title":"Elegant",
+      "description":"It's perfect to special events",
+      "urlToImage":"https://aws.glamour.mx/prod/designs/v1/assets/560x560/48524.jpg"
     },
     {
       "Id": 3,
       "title":"Classic",
-      "description":"It's perfect to special events"
+      "description":"It's perfect to special events",
+      "urlToImage":"https://i.pinimg.com/originals/3d/c7/e5/3dc7e597c698f719d401f97b1d51eeec.jpg"
     },
     {
       "Id": 4,
-      "title":"Sport",
-      "description":"It's perfect to special events"
+      "title":"Atletic",
+      "description":"It's perfect to special events",
+      "urlToImage":"https://miro.medium.com/max/1120/0*0Dt-czhfVLoxaZfX.jpg"
+    },
+    {
+      "Id": 5,
+      "title":"Nurse",
+      "description":"It's perfect to special events",
+      "urlToImage":"https://softgirloutfits.com/wp-content/uploads/2020/12/Elastic-Waist-Casual-Sport-Pants-4-Orezoria-Aesthetic-Outfits-Shop-Aesthetic-Clothing-eGirl-Outfits-Soft-Girl-Outfits.psd-560x560.jpg"
+    },
+    {
+      "Id": 6,
+      "title":"Frozen",
+      "description":"It's perfect to special events",
+      "urlToImage":"https://www.outfittrends.com/wp-content/uploads/2015/06/77d9dc2801738d0fd934db8863f6f8a2.jpg"
     }
+
   ]
 }

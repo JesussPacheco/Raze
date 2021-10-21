@@ -11,7 +11,7 @@ export class OutfitTypesService {
   getAll(): Observable<OutfitType[]> {
     return this.http.get<OutfitType[]>(baseUrl);
   }
-  
+
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);
   }

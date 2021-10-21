@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule} from "./material/material.module";
 import {HttpClientModule} from "@angular/common/http";
 import { OutfitTypesManagementComponent } from './components/outfit-types/pages/outfit-types-management/outfit-types-management.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { OutfitTypesManagementComponent } from './components/outfit-types/pages/
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
