@@ -6,7 +6,7 @@ import {AddPostComponent} from "../components/posts/pages/add-post/add-post.comp
 import {OutfitsManagerComponent} from "../components/outfits/pages/outfits-manager/outfits-manager.component";
 import {OutfitsItemComponent} from "../components/outfits/pages/outfits-item/outfits-item.component";
 import {AddOutfitComponent} from "../components/outfits/pages/add-outfit/add-outfit.component";
-
+import {OutfitTypesManagementComponent} from "../components/outfit-types/pages/outfit-types-management/outfit-types-management.component";
 
 const routes: Routes = [
 
@@ -15,7 +15,8 @@ const routes: Routes = [
   {path:'add',component:AddPostComponent},
   {path:'outfits',component:OutfitsManagerComponent},
   {path:'outfit/:id',component:OutfitsItemComponent},
-  {path:'addOutfit',component:AddOutfitComponent}
+  {path:'addOutfit',component:AddOutfitComponent},
+  {path:'outfit-types', component: OutfitTypesManagementComponent},
 ];
 
 @NgModule({

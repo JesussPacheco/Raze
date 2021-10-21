@@ -16,6 +16,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+
 @NgModule({
   declarations: [],
   imports: [
