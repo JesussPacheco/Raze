@@ -1,0 +1,55 @@
+<div>
+  <div *ngIf="currentFashion.id" class="edit-form">
+    <h4 class="beg-text">Fashion</h4>
+    <form>
+      <div class="form-group sec-text">
+        <label for="name"><strong>Name</strong></label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          [(ngModel)]="currentFashion.name"
+          name="name"/>
+      </div>
+
+      <div class="form-group">
+        <label for="specialtyId"><strong>Specialty</strong></label>
+        <input
+          type="number"
+          class="form-control"
+          id="specialtyId"
+          [(ngModel)]="currentFashion.specialtyId"
+          name="specialtyId"/>
+      </div>
+
+      <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentFashion.published ? "Published" : "Pending" }}
+      </div>
+    </form>
+
+    <button
+      class="btn btn-light"
+      *ngIf="currentFashion.published"
+      (click)="updatePublished(false)">UnPublish</button>
+
+    <button
+      *ngIf="!currentFashion.published"
+      class="btn btn-light"
+      (click)="updatePublished(true)">Publish</button>
+
+    <button class="btn btn-light wb2" (click)="deleteFashion()">Delete</button>
+
+    <button
+      type="submit"
+      class="btn btn-light wb2"
+      (click)="updateFashion()">Update</button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentFashion.id">
+    <br />
+    <p>Not found</p>
+  </div>
+</div>
+

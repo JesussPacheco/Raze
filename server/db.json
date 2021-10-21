@@ -20,5 +20,25 @@
       "description": "ufff",
       "id": 5
     }
+  ],
+  "fashions": [
+    {
+      "name": "Casual",
+      "specialtyId": 1,
+      "published": true,
+      "id": 1
+    },
+    {
+      "name": "Sport",
+      "specialtyId": 3,
+      "published": true,
+      "id": 2
+    },
+    {
+      "name": "Formal",
+      "specialtyId": 2,
+      "published": true,
+      "id": 3
+    }
   ]
 }
