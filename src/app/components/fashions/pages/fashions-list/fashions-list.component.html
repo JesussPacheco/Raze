@@ -1,0 +1,63 @@
+
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3 placeholder-css">
+
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Type your fashion here..."
+        [(ngModel)]="name"/>
+
+      <div class="input-group-append">
+        <button
+          class="btn btn-secondary"
+          type="button"
+          (click)="searchTitle()">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="col-md-6 list">
+    <h4>Fashions List<a routerLink="/add-fashion" class="fas fa-plus"></a></h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let fashion of fashions; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveFashion(fashion, i)">
+        {{ fashion.name }}
+      </li>
+    </ul>
+
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentFashion.id">
+      <h4 class="details-style list">Fashion</h4>
+      <div class="details-style list-comp">
+        <label><strong>Name:</strong></label> {{ currentFashion.name }}
+      </div>
+      <div class="details-style">
+        <label><strong>Specialty:</strong></label>
+        {{ currentFashion.specialtyId }}
+      </div>
+      <div class="details-style">
+        <label><strong>Status:</strong></label>
+        {{ currentFashion.published ? "Published" : "Pending" }}
+      </div>
+
+      <a class="btn btn-light edit-button" routerLink="/fashions/{{ currentFashion.id }}">
+        Edit
+      </a>
+    </div>
+
+    <div *ngIf="!currentFashion">
+      <br />
+      <p>Please click on a Fashion...</p>
+    </div>
+  </div>
+</div>
+
+

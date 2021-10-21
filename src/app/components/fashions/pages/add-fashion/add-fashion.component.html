@@ -1,0 +1,38 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group title-css">
+        <h4 class="add-new">New Fashion</h4><br>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="fashion.name"
+          name="name"/>
+      </div>
+
+      <div class="form-group">
+        <label for="specialtyId">Specialty</label>
+        <input
+          type="number"
+          class="form-control"
+          id="specialtyId"
+          required
+          [(ngModel)]="fashion.specialtyId"
+          name="specialtyId"/>
+      </div>
+
+      <button (click)="saveFashion()" class="btn btn-light">Save</button>
+      <a href="#" class="btn btn-light">Cancel</a>
+    </div>
+
+    <div *ngIf="submitted">
+      <br>
+      <h4 class="confirmation-text">New fashion was submitted successfully!</h4>
+      <br>
+      <a href="#" class="btn btn-light continue-btn">Continue</a>
+    </div>
+  </div>
+</div>

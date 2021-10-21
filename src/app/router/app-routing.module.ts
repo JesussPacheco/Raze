@@ -7,9 +7,12 @@ import {OutfitsManagerComponent} from "../components/outfits/pages/outfits-manag
 import {OutfitsItemComponent} from "../components/outfits/pages/outfits-item/outfits-item.component";
 import {AddOutfitComponent} from "../components/outfits/pages/add-outfit/add-outfit.component";
 import {OutfitTypesManagementComponent} from "../components/outfit-types/pages/outfit-types-management/outfit-types-management.component";
+import {FashionsListComponent} from "../components/fashions/pages/fashions-list/fashions-list.component";
+import {FashionFeatureComponent} from "../components/fashions/pages/fashion-feature/fashion-feature.component";
+import {AddFashionComponent} from "../components/fashions/pages/add-fashion/add-fashion.component";
 
 const routes: Routes = [
-
+  { path: '', redirectTo: 'fashions', pathMatch: 'full' },
   {path:'posts',component:PostsManagerComponent},
   {path:'post/:id',component:PostItemComponent},
   {path:'add',component:AddPostComponent},
@@ -17,6 +20,9 @@ const routes: Routes = [
   {path:'outfit/:id',component:OutfitsItemComponent},
   {path:'addOutfit',component:AddOutfitComponent},
   {path:'outfit-types', component: OutfitTypesManagementComponent},
+  { path: 'fashions', component: FashionsListComponent },
+  { path: 'fashions/:id', component: FashionFeatureComponent },
+  { path: 'add-fashion', component: AddFashionComponent }
 ];
 
 @NgModule({
