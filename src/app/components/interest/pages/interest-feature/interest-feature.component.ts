@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { InterestService } from 'src/app/assistance/interest.service';
+import { InterestService } from 'src/app/components/interest/services/interest.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Interest } from 'src/app/models/interest.model';
+import { Interest } from 'src/app/components/interest/model/interest.model';
 
 @Component({
   selector: 'app-interest-feature',

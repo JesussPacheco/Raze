@@ -24,14 +24,15 @@
       </div>
 
       <button (click)="saveInterest()" class="btn btn-light">Save</button>
-      <a href="#" class="btn btn-light">Cancel</a>
+      <a routerLink="/interests" class="btn btn-light">Cancel</a>
     </div>
 
     <div *ngIf="submitted">
       <br>
       <h4 class="confirmation-text">Your interest was submitted successfully!</h4>
       <br>
-      <a href="#" class="btn btn-light continue-btn">Continue</a>
+      <a routerLink="/interests" class="btn btn-light continue-btn">Continue</a>
     </div>
   </div>
 </div>
+

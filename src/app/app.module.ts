@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './router/app-routing.module';
 import { AppComponent } from './app.component';
-import { AddInterestComponent } from './elements/add-interest/add-interest.component';
-import { InterestFeatureComponent } from './elements/interest-feature/interest-feature.component';
-import { InterestsListComponent } from './elements/interests-list/interests-list.component';
+import { AddInterestComponent } from './components/interest/pages/add-interest/add-interest.component';
+import { InterestFeatureComponent } from './components/interest/pages/interest-feature/interest-feature.component';
+import { InterestsListComponent } from './components/interest/pages/interests-list/interests-list.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
