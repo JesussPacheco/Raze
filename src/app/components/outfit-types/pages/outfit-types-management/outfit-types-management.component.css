@@ -10,4 +10,12 @@
   background-color: #002C3E;
   color: #FFFFFF;
 }
+.button_edit{
+  background-color: #258225;
+  color: #FFFFFF;
+}
+.button_delete{
+  background-color: #cd0808;
+  color: #FFFFFF;
+}
 
