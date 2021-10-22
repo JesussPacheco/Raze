@@ -4,15 +4,46 @@
   background: #F7F8F3;
   display: block;
 }
-.toolbar{
-  background:#F7444E ;
-}
 .example-spacer {
   flex: 1 1 auto;
 }
-.navbar-brand{
-  color: #F7F8F3;
+.toolbar{
+  display: flex;
+  padding: 0 2%;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: #F7444E;
 }
-.navbar{
-  background-color: #F7444E;
+span {
+  color: #fff;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+a::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #78BCC4;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+a:hover::after{
+  width: 100%;
+}
+.button{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #002C3E;
+  padding: 6px 24px;
+  font-size: 13px;
+  background: #002C3E;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50px;
 }
