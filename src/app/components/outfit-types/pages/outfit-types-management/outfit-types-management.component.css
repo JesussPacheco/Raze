@@ -18,5 +18,28 @@
   cursor: pointer;
   border-radius: 50px;
 }
+.button_edit{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #002C3E;
+  font-size: 13px;
+  background: #10a510;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.button_delete{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #002C3E;
+  font-size: 13px;
+  background: #a71a1a;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
 
 
