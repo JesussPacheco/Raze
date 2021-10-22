@@ -16,7 +16,7 @@
 .edit-button{
   margin-left: 100px;
   margin-top: 30px;
-  background-color: #78BCC4;
+  background-color: #002C3E;
   color: #FFFFFF;
   border-radius: 50px;
 }
@@ -35,5 +35,5 @@
 }
 .fa-plus:hover{
   text-decoration: none;
-  color: #78BCC4;
+  color: #002C3E;
 }
