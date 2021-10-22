@@ -24,6 +24,8 @@ import { ReactiveFormsModule} from "@angular/forms";
 import { AddInterestComponent } from './components/interest/pages/add-interest/add-interest.component';
 import { InterestFeatureComponent } from './components/interest/pages/interest-feature/interest-feature.component';
 import { InterestsListComponent } from './components/interest/pages/interests-list/interests-list.component';
+import { OutfitTypesDeleteComponent } from './components/outfit-types/pages/outfit-types-delete/outfit-types-delete.component';
+import { OutfitTypesEditComponent } from './components/outfit-types/pages/outfit-types-edit/outfit-types-edit.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { InterestsListComponent } from './components/interest/pages/interests-li
     RegisterComponent,
     AddInterestComponent,
     InterestFeatureComponent,
-    InterestsListComponent
+    InterestsListComponent,
+    OutfitTypesDeleteComponent,
+    OutfitTypesEditComponent
   ],
   imports: [
     BrowserModule,
