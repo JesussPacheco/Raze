@@ -15,6 +15,7 @@ import {RegisterComponent} from "../components/login/pages/register/register.com
 import {InterestsListComponent } from '../components/interest/pages/interests-list/interests-list.component';
 import {InterestFeatureComponent } from '../components/interest/pages/interest-feature/interest-feature.component';
 import { AddInterestComponent } from '../components/interest/pages/add-interest/add-interest.component';
+import {OutfitTypeItemComponent} from "../components/outfit-types/pages/outfit-type-item/outfit-type-item.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'posts', pathMatch: 'full' },
@@ -32,7 +33,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent,  },
   { path: 'interests', component: InterestsListComponent },
   { path: 'interests/:id', component: InterestFeatureComponent },
-  { path: 'add-interest', component: AddInterestComponent }
+  { path: 'add-interest', component: AddInterestComponent },
+  { path: 'outfit-type/:id',component: OutfitTypeItemComponent}
 ];
 
 @NgModule({

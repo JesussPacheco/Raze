@@ -12,6 +12,8 @@ import {OutfitTypeItemComponent} from "../outfit-type-item/outfit-type-item.comp
 export class OutfitTypesManagementComponent implements OnInit {
   outfitTypes:OutfitType[];
   title = 'Card View Demo';
+  currentType: OutfitType = {};
+  currentIndex = -1;
 
   gridColumns = 3;
   constructor(private OutfitTypesService:OutfitTypesService,public dialog: MatDialog,) {
@@ -27,6 +29,11 @@ export class OutfitTypesManagementComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  setActiveType(type: OutfitType, index: number): void {
+    this.currentType = type;
+    this.currentIndex = index;
   }
 
   retrieveOutfitsTypes():void{

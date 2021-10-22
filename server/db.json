@@ -31,21 +31,21 @@
       "name": "basic summer",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "white t-shirt, blue jeans, white sneakers and watch",
-      "tagId": 1
+      "typeId": 1
     },
     {
       "id": 2,
       "name": "basic dark",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "white t-shirt, black jeans, black boots and black jacket",
-      "tagId": 2
+      "typeId": 2
     },
     {
       "id": 3,
       "name": "basic summer",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "white t-shirt, blue shorts jeans , white sneakers and necklace",
-      "tagId": 3
+      "typeId": 3
     }
   ],
   "Types": [

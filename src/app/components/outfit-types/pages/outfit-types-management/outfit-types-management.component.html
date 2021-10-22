@@ -1,7 +1,8 @@
 
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
-    <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let outfitType of outfitTypes">
+    <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let outfitType of outfitTypes; let i = index" [class.active]="i == currentIndex"
+         (click)="setActiveType(outfitType, i)">
       <mat-card class="mat-elevation-z4">
         <mat-card-header>
           <mat-card-title> {{outfitType.title}}</mat-card-title>
@@ -13,7 +14,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button class="button" (click)="openDialog()">VIEW MORE</button>
+          <button mat-button class="button" routerLink="/outfit-type/{{outfitType.id}}">VIEW MORE</button>
 
         </mat-card-actions>
       </mat-card>

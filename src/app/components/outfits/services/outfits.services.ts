@@ -36,4 +36,7 @@ export class OutfitsServices {
     return this.http.get<OutfitModel[]>(`${baseUrl}?name=${name}`);
   }
 
+  findType(type: any): Observable<OutfitModel[]> {
+    return this.http.get<OutfitModel[]>(`${baseUrl}?typeId=${type}`);
+  }
 }
