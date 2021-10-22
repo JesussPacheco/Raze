@@ -13,7 +13,7 @@ export class PostsManagerComponent implements OnInit {
   currentPost: PostModel = {};
   currentIndex = -1;
   title = '';
-
+  gridColumns = 3;
   constructor(private postsServices:PostsServices) { }
 
   ngOnInit(): void {

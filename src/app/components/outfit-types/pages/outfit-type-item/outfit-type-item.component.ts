@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {OutfitModel} from "../../../outfits/model/outfit.model";
+import {OutfitsServices} from "../../../outfits/services/outfits.services";
+
 
 @Component({
   selector: 'app-outfit-type-item',
@@ -6,10 +9,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./outfit-type-item.component.css']
 })
 export class OutfitTypeItemComponent implements OnInit {
+  outfits?: OutfitModel[];
+  currentOutfit: OutfitModel = {};
+  currentIndex = -1;
+  name = '';
 
-  constructor() { }
+  constructor(private outfitsServices:OutfitsServices) { }
 
   ngOnInit(): void {
+    this.retrieveOutfits()
   }
 
+  retrieveOutfits(): void {
+    this.outfitsServices.getAll()
+      .subscribe(
+        data => {
+          this.outfits = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
+
+  refreshList(): void {
+    this.retrieveOutfits();
+    this.currentOutfit = {};
+    this.currentIndex = -1;
+  }
 }

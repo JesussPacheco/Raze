@@ -5,16 +5,16 @@
 
       <input
         type="text"
-        class="form-control"
+        class="form-control rounded size"
         placeholder="Type your fashion here..."
         [(ngModel)]="name"/>
 
       <div class="input-group-append">
-        <button
+        <button mat-icon-button
           class="btn btn-secondary"
           type="button"
           (click)="searchTitle()">
-          Search
+          <mat-icon>search</mat-icon>
         </button>
       </div>
     </div>
@@ -48,7 +48,7 @@
         {{ currentFashion.published ? "Published" : "Pending" }}
       </div>
 
-      <a class="btn btn-light edit-button" routerLink="/fashions/{{ currentFashion.id }}">
+      <a class="btn btn-light edit-button rounded" routerLink="/fashions/{{ currentFashion.id }}">
         Edit
       </a>
     </div>
