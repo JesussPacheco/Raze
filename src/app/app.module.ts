@@ -18,6 +18,10 @@ import { AddOutfitComponent } from './components/outfits/pages/add-outfit/add-ou
 import { OutfitTypesManagementComponent } from './components/outfit-types/pages/outfit-types-management/outfit-types-management.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import { OutfitTypeItemComponent } from './components/outfit-types/pages/outfit-type-item/outfit-type-item.component';
+import { LoginComponent } from './components/login/pages/login/login.component';
+import { RegisterComponent } from './components/login/pages/register/register.component';
+import {ReactiveFormsModule} from "@angular/forms";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +35,9 @@ import { OutfitTypeItemComponent } from './components/outfit-types/pages/outfit-
     OutfitTypeItemComponent,
     AddFashionComponent,
     FashionFeatureComponent,
-    FashionsListComponent
+    FashionsListComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +47,7 @@ import { OutfitTypeItemComponent } from './components/outfit-types/pages/outfit-
     FormsModule,
     FlexLayoutModule,
     MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
