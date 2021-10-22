@@ -23,7 +23,7 @@ export class AddOutfitComponent implements OnInit {
 
   saveTutorial(): void {
     const data = {
-      title: this.outfit.name,
+      name: this.outfit.name,
       img:this.outfit.img,
       description: this.outfit.description
     };

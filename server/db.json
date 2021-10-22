@@ -4,25 +4,35 @@
       "id": 2,
       "title": "t-shirt white",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
-      "description": "this t-shirt is fantastic"
+      "description": "this t-shirt is fantastic",
+      "outfitId": 1
     },
     {
       "id": 3,
       "title": "blue Jeans",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
-      "description": "the blue jeans are the best"
+      "description": "the blue jeans are the best",
+      "outfitId": 3
     },
     {
       "title": "shirt",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "white shirt",
-      "id": 4
+      "id": 4,
+      "outfitId": 2
     },
     {
       "title": "exercises uniform",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "Clothes for training",
-      "id": 5
+      "id": 5,
+      "outfitId": 1
+    },
+    {
+      "title": "New post",
+      "img": "",
+      "description": "Best Color for this sprint",
+      "id": 6
     }
   ],
   "Outfits": [
@@ -46,6 +56,12 @@
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "white t-shirt, blue shorts jeans , white sneakers and necklace",
       "typeId": 3
+    },
+    {
+      "name": "New outfit",
+      "img": "",
+      "description": "Desc",
+      "id": 4
     }
   ],
   "Types": [

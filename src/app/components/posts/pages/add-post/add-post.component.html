@@ -15,6 +15,13 @@
           <mat-form-field appearance="outline">
             <mat-label>Description</mat-label>
             <input required matInput placeholder="Description" [(ngModel)]="post.description" name="description">
+          </mat-form-field><br>
+          <mat-form-field appearance="outline">
+            <mat-select [(ngModel)]="post.outfitId" placeholder="Outfit">
+              <ng-container *ngFor="let outfit of outfits">
+                <mat-option value="{{outfit.id}}">{{outfit.name}}</mat-option>
+              </ng-container>
+            </mat-select>
           </mat-form-field>
         </mat-card-content>
         <mat-card-actions class="right">
