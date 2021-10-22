@@ -21,6 +21,14 @@
   margin-top: 10px;
   border-radius: 50px;
 }
+.btn-light-2{
+  background-color: transparent;
+  border: 1px solid #002C3E;
+  color: black;
+  margin-left: 20%;
+  margin-top: 10px;
+  border-radius: 50px;
+}
 .continue-btn{
   margin-left: 50%;
   transform: translateX(-50%);
