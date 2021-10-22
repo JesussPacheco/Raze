@@ -79,7 +79,7 @@
     },
     {
       "Id": 6,
-      "title": "Frozen",
+      "title":"Frozen",
       "description": "It's perfect to special events",
       "urlToImage": "https://www.outfittrends.com/wp-content/uploads/2015/06/77d9dc2801738d0fd934db8863f6f8a2.jpg"
     }
@@ -100,6 +100,26 @@
     {
       "name": "Formal",
       "specialtyId": 2,
+      "published": true,
+      "id": 3
+    }
+  ],
+  "interest": [
+    {
+      "title": "Casual",
+      "description": "Ropa informal",
+      "published": true,
+      "id": 1
+    },
+    {
+      "title": "Sport",
+      "description": "Ropa deportiva",
+      "published": true,
+      "id": 2
+    },
+    {
+      "title": "Formal",
+      "description": "Ropa formal y elegante",
       "published": true,
       "id": 3
     }

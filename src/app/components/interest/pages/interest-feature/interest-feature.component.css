@@ -1,0 +1,19 @@
+.edit-form {
+  max-width: 400px;
+  margin: auto;
+}
+.wb2{
+  margin-left: 60px;
+}
+.beg-text{
+  margin-top: 20%;
+  text-align: center;
+}
+.sec-text{
+  margin-top: 40px;
+}
+.btn-light{
+  background-color: #002C3E;
+  color: #FFFFFF;
+  border-radius: 50px;
+}

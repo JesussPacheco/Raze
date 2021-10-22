@@ -4,9 +4,15 @@
   background: #F7F8F3;
   display: block;
 }
+.toolbar{
+  background:#F7444E ;
+}
 .example-spacer {
   flex: 1 1 auto;
 }
-.toolbar{
-  background:#F7444E ;
+.navbar-brand{
+  color: #F7F8F3;
+}
+.navbar{
+  background-color: #F7444E;
 }

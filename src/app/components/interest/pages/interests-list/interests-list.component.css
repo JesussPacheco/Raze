@@ -1,0 +1,39 @@
+.list {
+  text-align: left;
+  margin: auto;
+  background-color: #F7F8F3;
+}
+.list-group-item{
+  background-color: #F2F2F2;
+  color: #000000;
+}
+.list-group-item:hover{
+  background-color: #d7d7d7;
+}
+.details-style{
+  margin-left: 50px;
+}
+.edit-button{
+  margin-left: 100px;
+  margin-top: 30px;
+  background-color: #002C3E;
+  color: #FFFFFF;
+  border-radius: 50px;
+}
+.placeholder-css{
+  margin-left: 20%;
+}
+.list{
+  margin-top: 30px;
+}
+.list-comp{
+  margin-top: 20px;
+}
+.fa-plus{
+  margin-left: 20px;
+  color: #a8a5a5;
+}
+.fa-plus:hover{
+  text-decoration: none;
+  color: #002C3E;
+}

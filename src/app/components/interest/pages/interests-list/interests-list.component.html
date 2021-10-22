@@ -1,0 +1,62 @@
+
+<div class="list row">
+  <div class="col-md-8">
+    <div class="input-group mb-3 placeholder-css">
+
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Type your interest here..."
+        [(ngModel)]="title"/>
+
+      <div class="input-group-append">
+        <button
+          class="btn btn-secondary"
+          type="button"
+          (click)="searchTitle()">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="col-md-6 list">
+    <h4>My Interests List<a routerLink="/add" class="fas fa-plus"></a></h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let interest of interests; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveInterest(interest, i)">
+        {{ interest.title }}
+      </li>
+    </ul>
+
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentInterest.id">
+      <h4 class="details-style list">Interest</h4>
+      <div class="details-style list-comp">
+        <label><strong>Title:</strong></label> {{ currentInterest.title }}
+      </div>
+      <div class="details-style">
+        <label><strong>Description:</strong></label>
+        {{ currentInterest.description }}
+      </div>
+      <div class="details-style">
+        <label><strong>Status:</strong></label>
+        {{ currentInterest.published ? "Published" : "Pending" }}
+      </div>
+
+      <a class="btn btn-light edit-button" routerLink="/interests/{{ currentInterest.id }}">
+        Edit
+      </a>
+    </div>
+
+    <div *ngIf="!currentInterest">
+      <br />
+      <p>Please click on a Interest...</p>
+    </div>
+  </div>
+</div>
+

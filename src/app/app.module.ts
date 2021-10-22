@@ -6,7 +6,7 @@ import { AddFashionComponent } from './components/fashions/pages/add-fashion/add
 import { FashionFeatureComponent } from './components/fashions/pages/fashion-feature/fashion-feature.component';
 import { FashionsListComponent } from './components/fashions/pages/fashions-list/fashions-list.component';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule} from "./material/material.module";
 import { PostsManagerComponent } from './components/posts/pages/posts-manager/posts-manager.component';
@@ -16,11 +16,14 @@ import { OutfitsManagerComponent } from './components/outfits/pages/outfits-mana
 import { OutfitsItemComponent } from './components/outfits/pages/outfits-item/outfits-item.component';
 import { AddOutfitComponent } from './components/outfits/pages/add-outfit/add-outfit.component';
 import { OutfitTypesManagementComponent } from './components/outfit-types/pages/outfit-types-management/outfit-types-management.component';
-import {FlexLayoutModule} from "@angular/flex-layout";
+import { FlexLayoutModule} from "@angular/flex-layout";
 import { OutfitTypeItemComponent } from './components/outfit-types/pages/outfit-type-item/outfit-type-item.component';
 import { LoginComponent } from './components/login/pages/login/login.component';
 import { RegisterComponent } from './components/login/pages/register/register.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import { ReactiveFormsModule} from "@angular/forms";
+import { AddInterestComponent } from './components/interest/pages/add-interest/add-interest.component';
+import { InterestFeatureComponent } from './components/interest/pages/interest-feature/interest-feature.component';
+import { InterestsListComponent } from './components/interest/pages/interests-list/interests-list.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import {ReactiveFormsModule} from "@angular/forms";
     FashionFeatureComponent,
     FashionsListComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddInterestComponent,
+    InterestFeatureComponent,
+    InterestsListComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     FormsModule,
     FlexLayoutModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

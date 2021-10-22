@@ -12,6 +12,9 @@ import {FashionFeatureComponent} from "../components/fashions/pages/fashion-feat
 import {AddFashionComponent} from "../components/fashions/pages/add-fashion/add-fashion.component";
 import {LoginComponent} from "../components/login/pages/login/login.component";
 import {RegisterComponent} from "../components/login/pages/register/register.component";
+import {InterestsListComponent } from '../components/interest/pages/interests-list/interests-list.component';
+import {InterestFeatureComponent } from '../components/interest/pages/interest-feature/interest-feature.component';
+import { AddInterestComponent } from '../components/interest/pages/add-interest/add-interest.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'posts', pathMatch: 'full' },
@@ -26,7 +29,10 @@ const routes: Routes = [
   { path: 'fashions/:id', component: FashionFeatureComponent },
   { path: 'add-fashion', component: AddFashionComponent },
   { path: 'login', component: LoginComponent,  },
-  { path: 'register', component: RegisterComponent,  }
+  { path: 'register', component: RegisterComponent,  },
+  { path: 'interests', component: InterestsListComponent },
+  { path: 'interests/:id', component: InterestFeatureComponent },
+  { path: 'add-interest', component: AddInterestComponent }
 ];
 
 @NgModule({
