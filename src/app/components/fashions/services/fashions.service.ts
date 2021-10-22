@@ -32,7 +32,7 @@ export class FashionsService {
     return this.http.delete(`${baseUrl}/${id}`);
   }
 
-  findByTitle(title: any): Observable<FashionModel[]> {
-    return this.http.get<FashionModel[]>(`${baseUrl}?title=${title}`);
+  findByTitle(name: any): Observable<FashionModel[]> {
+    return this.http.get<FashionModel[]>(`${baseUrl}?name=${name}`);
   }
 }

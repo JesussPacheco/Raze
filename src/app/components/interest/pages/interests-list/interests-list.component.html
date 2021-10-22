@@ -5,16 +5,16 @@
 
       <input
         type="text"
-        class="form-control"
+        class="form-control rounded size"
         placeholder="Type your interest here..."
         [(ngModel)]="title"/>
 
-      <div class="input-group-append">
-        <button
-          class="btn btn-secondary"
-          type="button"
-          (click)="searchTitle()">
-          Search
+      <div class="input-group-append rounded">
+        <button mat-icon-button
+                class="btn btn-secondary"
+                type="button"
+                (click)="searchTitle()">
+          <mat-icon>search</mat-icon>
         </button>
       </div>
     </div>

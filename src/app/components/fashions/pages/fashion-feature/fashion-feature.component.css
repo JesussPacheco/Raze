@@ -16,4 +16,9 @@
   background-color: #002C3E;
   color: #FFFFFF;
 }
+.btn-light-2{
+  background-color: transparent;
+  color: black;
+  border: 1px solid #002C3E;
+}
 

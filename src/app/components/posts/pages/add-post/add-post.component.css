@@ -6,6 +6,11 @@
   background-color: #002C3E;
   color: #FFFFFF;
 }
+.red{
+  color: black;
+  border: 1px solid #002C3E;
+  background: transparent;
+}
 .size{
   width: 75%;
 }

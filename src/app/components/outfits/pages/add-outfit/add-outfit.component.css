@@ -1,12 +1,15 @@
 
 .rounded{
   border-radius: 50px!important;
+  color: white;
 }
 .green{
   background-color: #002C3E;
 }
 .red{
-  background-color: #ea0000;
+  color: black;
+  border: 1px solid #002C3E;
+  background: transparent;
 }
 .size{
   width: 75%;

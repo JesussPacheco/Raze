@@ -37,3 +37,6 @@
   text-decoration: none;
   color: #002C3E;
 }
+.rounded{
+  border-radius: 50px!important;
+}

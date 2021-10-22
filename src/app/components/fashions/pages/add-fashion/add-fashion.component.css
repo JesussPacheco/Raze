@@ -20,6 +20,13 @@
   margin-left: 20%;
   margin-top: 10px;
 }
+.btn-light-2{
+  background-color: transparent;
+  border: #002C3E;
+  color: black;
+  margin-left: 20%;
+  margin-top: 10px;
+}
 .continue-btn{
   margin-left: 50%;
   transform: translateX(-50%);
