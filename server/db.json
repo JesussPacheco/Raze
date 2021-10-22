@@ -1,24 +1,71 @@
 {
-  "Posts": [
+  "professions": [
     {
-      "id": 2,
-      "title": "t-shirt white",
-      "description": "this t-shirt is fantastic"
+      "name": "Administración de Empresas",
+      "description": "Administración de Empresas",
+      "id": 1
     },
     {
-      "id": 3,
-      "title": "blue Jeans",
-      "description": "the blue jeans are the best"
+      "name": "Ingeniería Industrial",
+      "description": "Ingeniería Industrial",
+      "id": 3
     },
     {
-      "title": "Prueba post",
-      "description": "pequeña description",
+      "name": "Contabilidad",
+      "description": "Contabilidad",
       "id": 4
     },
     {
-      "title": "okay",
-      "description": "ufff",
+      "name": "Economía",
+      "description": "Economía",
       "id": 5
+    },
+    {
+      "name": "Administración de Negocios Internacionales",
+      "description": "Administración de Negocios Internacionales",
+      "id": 6
+    },
+    {
+      "name": "Administración técnica de empresas",
+      "description": "Administración técnica de empresas",
+      "id": 7
+    },
+    {
+      "name": "Marketing y Mercadotecnia",
+      "description": "Marketing y Mercadotecnia",
+      "id": 8
+    },
+    {
+      "name": "Técnico en Administración de Negocios Internacionales",
+      "description": "Técnico en Administración de Negocios Internacionales",
+      "id": 9
+    },
+    {
+      "name": "Ciencias de la comunicación",
+      "description": "Ciencias de la comunicación",
+      "id": 10
+    },
+    {
+      "name": "Derecho",
+      "description": "Derecho",
+      "id": 11
+    },
+    {
+      "name": "Arquitectura",
+      "description": "Arquitectura",
+      "id": 12
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "computers",
+      "description": "computers, laptops, monitors, etc"
+    },
+    {
+      "id": "2",
+      "name": "gaming",
+      "description": "mouse, monitors, keyboards etc"
     }
   ]
 }

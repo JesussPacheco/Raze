@@ -1,0 +1,26 @@
+<p><a [routerLink]="['/profession']" >Regresar a lista </a> </p>
+<h3>Edit profession</h3>
+<form ngNativeValidate (ngSubmit)="enviarDatos($event)"  [formGroup]="formularioProfession" >
+
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Profession Name</label>
+    <div class="col-sm-10">
+      <input required formControlName="name" type="text"  class="form-control" name="" value="" placeholder="name">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Profession Name</label>
+    <div class="col-sm-10">
+      <input required formControlName="description" type="text"  class="form-control" name="" value="" placeholder="description">
+    </div>
+  </div>
+
+  <div class="form-group row text-center">
+    <div class="col-sm-10 ">
+      <button type="submit" class="btn btn-primary">Grabar</button> 
+    </div>
+    
+  </div>
+</form>
+

@@ -1,0 +1,25 @@
+
+<p><a [routerLink]="['/profession/agregar']" >Agregar profession </a> </p>
+<h3>Lista de profesionales</h3>
+<table class="table table-hover table-bordered" bordered="true" >
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"class="text-center">Nombre</th>
+        <th scope="col"class="text-center">Descripcion</th>
+        <th scope="col"class="text-center">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let profession of professions; index as i ">
+        <th scope="row">{{ i + 1}}</th>
+        <td>{{profession.name}}</td>
+        <td>{{profession.description}}</td>
+        <td class="text-center">
+            <a class="btn btn-success" role="button" routerLink="/profession/editar/{{profession.id}}" >Editar </a> | 
+            <a class="btn btn-danger" role="button" (click)="deleteProfessions(profession.id)" >Borrar </a>
+        </td>
+      </tr>            
+    </tbody>
+  </table>
+
