@@ -10,6 +10,7 @@
   background: #002C3E;
   cursor: pointer;
   border-radius: 50px;
+  width: 7%;
 }
 .back-arrow p, .back-arrow mat-icon{
   margin: 0;
