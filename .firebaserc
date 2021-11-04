@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "openraze-cb5bb": {
+      "hosting": {
+        "Raze": [
+          "openraze-cb5bb"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "openraze-cb5bb"
+  }
+}
