@@ -10,9 +10,7 @@ import { FashionsService } from "../../services/fashions.service";
 export class AddFashionComponent implements OnInit {
 
   fashion: FashionModel = {
-    name: '',
-    specialtyId: 0,
-    published: false
+    name: ''
   };
   submitted = false;
 
@@ -23,8 +21,7 @@ export class AddFashionComponent implements OnInit {
 
   saveFashion(): void {
     const data = {
-      name: this.fashion.name,
-      specialtyId: this.fashion.specialtyId
+      name: this.fashion.name
     };
 
     this.fashionService.create(data)
@@ -41,9 +38,7 @@ export class AddFashionComponent implements OnInit {
   newFashion(): void {
     this.submitted = false;
     this.fashion = {
-      name: '',
-      specialtyId: 0,
-      published: false
+      name: ''
     };
   }
 }

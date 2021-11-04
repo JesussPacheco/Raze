@@ -11,9 +11,7 @@ import { FashionsService } from "../../services/fashions.service";
 export class FashionFeatureComponent implements OnInit {
 
   currentFashion: FashionModel = {
-    name: '',
-    specialtyId: 0,
-    published: false
+    name: ''
   };
   message = '';
 
@@ -33,27 +31,6 @@ export class FashionFeatureComponent implements OnInit {
         data => {
           this.currentFashion = data;
           console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
-  }
-
-  updatePublished(status: boolean): void {
-    const data = {
-      name: this.currentFashion.name,
-      specialtyId: this.currentFashion.specialtyId,
-      published: status
-    };
-
-    this.message = '';
-
-    this.fashionService.update(this.currentFashion.id, data)
-      .subscribe(
-        response => {
-          this.currentFashion.published = status;
-          console.log(response);
-          this.message = response.message ? response.message : 'The status was updated successfully!';
         },
         error => {
           console.log(error);

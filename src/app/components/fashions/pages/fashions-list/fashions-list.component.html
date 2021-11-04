@@ -41,14 +41,6 @@
       <div class="details-style list-comp">
         <label><strong>Name:</strong></label> {{ currentFashion.name }}
       </div>
-      <div class="details-style">
-        <label><strong>Specialty:</strong></label>
-        {{ currentFashion.specialtyId }}
-      </div>
-      <div class="details-style">
-        <label><strong>Status:</strong></label>
-        {{ currentFashion.published ? "Published" : "Pending" }}
-      </div>
 
       <a class="btn btn-light edit-button rounded" routerLink="/fashions/{{ currentFashion.id }}">
         Edit
