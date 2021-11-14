@@ -3,6 +3,7 @@ import {PostModel} from "../../model/post.model";
 import {PostsServices} from "../../services/posts.services";
 import {OutfitModel} from "../../../outfits/model/outfit.model";
 import {OutfitsServices} from "../../../outfits/services/outfits.services";
+import {StorageServices} from "../../services/storage.services";
 
 @Component({
   selector: 'app-add-post',
@@ -17,9 +18,11 @@ export class AddPostComponent implements OnInit {
     description: '',
   };
   submitted = false;
-  outfits?: OutfitModel[]
+  outfits?: OutfitModel[];
+  images: any[]=[];
 
-  constructor(private postServices:PostsServices, private outfitServices:OutfitsServices) { }
+  constructor(private postServices:PostsServices, private outfitServices:OutfitsServices,
+              private  storageService: StorageServices) { }
 
   ngOnInit(): void {
     this.retrieveOutfit();
@@ -62,5 +65,20 @@ export class AddPostComponent implements OnInit {
       img:'',
       description: '',
     };
+  }
+  uploadImage(event: any){
+    let files = event.target.files;
+    let reader = new FileReader()
+
+    reader.readAsDataURL(files[0]);
+    reader.onloadend=()=>{
+
+      console.log(reader.result)
+      this.images.push(reader.result);
+      this.storageService.uploadImage("image"+"_"+Date.now(),reader.result)
+        .then(imgUrl=>{
+          this.post.img=imgUrl;
+        })
+    }
   }
 }

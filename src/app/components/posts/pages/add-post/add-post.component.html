@@ -4,10 +4,20 @@
       <mat-card>
         <mat-card-title>New Post</mat-card-title>
         <mat-card-content>
+
           <div>
             <mat-label>Image</mat-label><br>
-            <input type="file" [(ngModel)]="post.img" name="img"><br><br>
+            <div class="center">
+              <img src="{{images[0]}}" style="max-height: 100%">
+            </div>
+            <div>
+              <input type="file" name="img" (change)="uploadImage($event)" id="inputFile">
+              <label for="inputFile" class="labelInputFile">Choose Image</label>
+            </div>
+            <br><br>
+
           </div>
+
           <mat-form-field appearance="outline">
             <mat-label>Title</mat-label>
             <input required matInput placeholder="Title" required [(ngModel)]="post.title" name="title">
