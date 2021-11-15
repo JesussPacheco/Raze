@@ -16,6 +16,7 @@ import {InterestsListComponent } from '../components/interest/pages/interests-li
 import {InterestFeatureComponent } from '../components/interest/pages/interest-feature/interest-feature.component';
 import { AddInterestComponent } from '../components/interest/pages/add-interest/add-interest.component';
 import {OutfitTypeItemComponent} from "../components/outfit-types/pages/outfit-type-item/outfit-type-item.component";
+import {CalendarComponent} from "../components/calendar/calendar.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'posts', pathMatch: 'full' },
@@ -34,7 +35,8 @@ const routes: Routes = [
   { path: 'interests', component: InterestsListComponent },
   { path: 'interests/:id', component: InterestFeatureComponent },
   { path: 'add-interest', component: AddInterestComponent },
-  { path: 'outfit-type/:id',component: OutfitTypeItemComponent}
+  { path: 'outfit-type/:id',component: OutfitTypeItemComponent},
+  {path:'calendar',component:CalendarComponent}
 ];
 
 @NgModule({

@@ -24,6 +24,8 @@ import { ReactiveFormsModule} from "@angular/forms";
 import { AddInterestComponent } from './components/interest/pages/add-interest/add-interest.component';
 import { InterestFeatureComponent } from './components/interest/pages/interest-feature/interest-feature.component';
 import { InterestsListComponent } from './components/interest/pages/interests-list/interests-list.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { AddToCalendarModule } from 'add-events-to-google-calendar';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { InterestsListComponent } from './components/interest/pages/interests-li
     RegisterComponent,
     AddInterestComponent,
     InterestFeatureComponent,
-    InterestsListComponent
+    InterestsListComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { InterestsListComponent } from './components/interest/pages/interests-li
     FlexLayoutModule,
     MaterialModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    AddToCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
