@@ -24,6 +24,7 @@ import { ReactiveFormsModule} from "@angular/forms";
 import { AddInterestComponent } from './components/interest/pages/add-interest/add-interest.component';
 import { InterestFeatureComponent } from './components/interest/pages/interest-feature/interest-feature.component';
 import { InterestsListComponent } from './components/interest/pages/interests-list/interests-list.component';
+import { MyProfileComponent } from './components/my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { InterestsListComponent } from './components/interest/pages/interests-li
     RegisterComponent,
     AddInterestComponent,
     InterestFeatureComponent,
-    InterestsListComponent
+    InterestsListComponent,
+    MyProfileComponent
   ],
   imports: [
     BrowserModule,

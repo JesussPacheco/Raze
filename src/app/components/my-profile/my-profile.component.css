@@ -1,0 +1,36 @@
+.container{
+  display: flex;
+  justify-content: center;
+}
+.picture{
+  text-align: center;
+  margin-top: 50px;
+  height: 200px;
+}
+.input{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+#inputFile{
+  display: none;
+}
+.label_input{
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #002C3E;
+  font-size: 40px;
+  background: #002C3E;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.label_input:hover{
+  border: 1px solid #FFFFFF;
+  opacity: 0.75;
+}
