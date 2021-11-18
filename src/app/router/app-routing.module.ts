@@ -18,7 +18,7 @@ import { AddInterestComponent } from '../components/interest/pages/add-interest/
 import {OutfitTypeItemComponent} from "../components/outfit-types/pages/outfit-type-item/outfit-type-item.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'posts', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {path:'posts',component:PostsManagerComponent},
   {path:'post/:id',component:PostItemComponent},
   {path:'add',component:AddPostComponent},
