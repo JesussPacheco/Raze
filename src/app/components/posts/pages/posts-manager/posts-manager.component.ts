@@ -17,7 +17,17 @@ export class PostsManagerComponent implements OnInit {
   currentIndex = -1;
   title = '';
   gridColumns = 3;
-  currentUser: User = {};
+  currentUser: User = {
+    age: 0,
+    email: "",
+    id: 0,
+    imgProfile: "",
+    interestId: 0,
+    name: "",
+    roles: [],
+    userType: "",
+    username: ""
+  };
   constructor(private route: ActivatedRoute, private router: Router, private postsServices:PostsServices, private userService:UserService) {  }
 
   ngOnInit(): void {
@@ -29,8 +39,7 @@ export class PostsManagerComponent implements OnInit {
     this.userService.get(this.route.snapshot.params.id)
       .subscribe(data => {
         this.currentUser = data;
-        console.log('Userid');
-        console.log(this.currentUser.id);
+        console.log(this.currentUser);
       },
         error => {
           console.log(error);
