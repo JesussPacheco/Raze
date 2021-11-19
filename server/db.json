@@ -5,34 +5,39 @@
       "title": "t-shirt white",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "this t-shirt is fantastic",
-      "outfitId": 1
+      "outfitId": 1,
+      "userId": 1
     },
     {
       "id": 3,
       "title": "blue Jeans",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "the blue jeans are the best",
-      "outfitId": 3
+      "outfitId": 3,
+      "userId": 1
     },
     {
       "title": "shirt",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "white shirt",
       "id": 4,
-      "outfitId": 2
+      "outfitId": 2,
+      "userId": 1
     },
     {
       "title": "exercises uniform",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "Clothes for training",
       "id": 5,
-      "outfitId": 1
+      "outfitId": 1,
+      "userId": 2
     },
     {
       "title": "New post",
       "img": "https://www.outfittrends.com/wp-content/uploads/2015/06/77d9dc2801738d0fd934db8863f6f8a2.jpg",
       "description": "Best Color for this sprint",
-      "id": 6
+      "id": 6,
+      "userId": 3
     }
   ],
   "Outfits": [
@@ -156,6 +161,17 @@
       "userType": "Advised",
       "professionId": "1",
       "premium": true
+    },
+    {
+      "name": "Luis",
+      "username": "luis",
+      "age": 20,
+      "interestId": "2",
+      "email": "a@gmail.com",
+      "password": "pass",
+      "userType": "Advisor",
+      "yearsExperience": 10,
+      "id": 3
     }
   ]
 }

@@ -4,4 +4,5 @@ export class PostModel{
   img?:string;
   description?:string;
   outfitId?: number;
+  userId?: number;
 }

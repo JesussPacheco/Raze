@@ -19,7 +19,7 @@ import {OutfitTypeItemComponent} from "../components/outfit-types/pages/outfit-t
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  {path:'posts',component:PostsManagerComponent},
+  {path:'posts/:id',component:PostsManagerComponent},
   {path:'post/:id',component:PostItemComponent},
   {path:'add',component:AddPostComponent},
   {path:'outfits',component:OutfitsManagerComponent},

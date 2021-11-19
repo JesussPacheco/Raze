@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(){
-    this.router.navigate(['/posts']);
+    this.router.navigate(['/posts/2']);
   }
 
   onRegister(){

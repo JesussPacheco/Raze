@@ -3,8 +3,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {InterestService} from "../../../interest/services/interest.service";
 import {Interest} from "../../../interest/model/interest.model";
-import {User} from "../../../users/model/user.model";
-import {UserService} from "../../../users/services/user.service";
+import {User} from "../../../security/model/user.model";
+import {UserService} from "../../../security/services/user.service";
 
 @Component({
   selector: 'app-register',

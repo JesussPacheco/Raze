@@ -24,9 +24,11 @@
             <span>{{post.description}}</span>
           </mat-card-content>
           <mat-card-actions class="right">
-            <button mat-icon-button routerLink="/post/{{ currentPost.id }}">
-              <mat-icon>edit</mat-icon>
-            </button>
+            <div *ngIf="currentUser.id == post.userId">
+              <button mat-icon-button routerLink="/post/{{ currentPost.id }}">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
             <button mat-button class="rounded green button">
               Contact
             </button>
