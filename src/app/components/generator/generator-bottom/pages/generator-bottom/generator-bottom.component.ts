@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {BottomModel} from "../../model/bottom.model";
 import {BottomServices} from "../../services/buttom.services";
 
@@ -13,6 +13,8 @@ export class GeneratorBottomComponent implements OnInit {
   currentBottom: BottomModel = {};
   currentIndex = -1;
   name = '';
+
+  @Output() chooseBottom = new EventEmitter<string>()
 
   constructor(private bottomService:BottomServices) { }
 
@@ -60,6 +62,7 @@ export class GeneratorBottomComponent implements OnInit {
   }
   selectBottom(bottom: BottomModel){
     console.log(bottom);
+    this.chooseBottom.emit(bottom.image)
   }
 
 }

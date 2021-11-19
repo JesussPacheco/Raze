@@ -1,0 +1,18 @@
+<div>
+  <div>
+    <div class="center">
+      <button mat-icon-button routerLink="/generator" class="button">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div class="flex-container small-card">
+      <div class="flex-items" *ngFor="let outfitGenerated of outfitsGenerated; let i = index" [class.active]="i == currentIndex">
+        <mat-card>
+          <img mat-card-lg-image src="{{outfitGenerated.topImage}}" class="small-card-image">
+          <img mat-card-lg-image src="{{outfitGenerated.bottomImage}}" class="small-card-image">
+          <img mat-card-lg-image src="{{outfitGenerated.footWearImage}}" class="small-card-image">
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

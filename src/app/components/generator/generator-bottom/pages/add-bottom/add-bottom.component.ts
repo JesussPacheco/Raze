@@ -1,34 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import {TopModel} from "../../../model/top.model";
-import {TopServices} from "../../../services/top.services";
-import {TopStorageServices} from "../../../services/top.storage.services";
+import {BottomModel} from "../../model/bottom.model";
+import {BottomServices} from "../../services/buttom.services";
+import {BottomStorageService} from "../../services/bottom.storage.service";
 
 @Component({
-  selector: 'app-add-top',
-  templateUrl: './add-top.component.html',
-  styleUrls: ['./add-top.component.css']
+  selector: 'app-add-bottom',
+  templateUrl: './add-bottom.component.html',
+  styleUrls: ['./add-bottom.component.css']
 })
-export class AddTopComponent implements OnInit {
+export class AddBottomComponent implements OnInit {
 
-  top:TopModel={
+  bottom:BottomModel={
     name:'',
     image:''
   };
   submitted=false;
   images: any[]=[];
 
-  constructor(private topServices: TopServices, private storageService:TopStorageServices) { }
+  constructor(private bottomServices: BottomServices, private storageService: BottomStorageService) { }
 
   ngOnInit(): void {
   }
 
-  saveTop(): void {
+  saveBottom(): void {
     const data = {
-      name: this.top.name,
-      image:this.top.image,
+      name: this.bottom.name,
+      image:this.bottom.image,
     };
 
-    this.topServices.create(data)
+    this.bottomServices.create(data)
       .subscribe(
         response => {
           console.log(response);
@@ -39,9 +39,9 @@ export class AddTopComponent implements OnInit {
         });
   }
 
-  newTop(): void {
+  newBottom(): void {
     this.submitted = false;
-    this.top = {
+    this.bottom = {
       name: '',
       image:''
     };
@@ -58,8 +58,9 @@ export class AddTopComponent implements OnInit {
       this.images.push(reader.result);
       this.storageService.uploadImage("image"+"_"+Date.now(),reader.result)
         .then(imgUrl=>{
-          this.top.image=imgUrl;
+          this.bottom.image=imgUrl;
         })
     }
   }
+
 }

@@ -1,7 +1,35 @@
-<br>
-<app-generator-top></app-generator-top>
-<br>
-<app-generator-bottom></app-generator-bottom>
-<br>
-<app-generator-foot-wear></app-generator-foot-wear>
-<br>
+<div>
+  <div *ngIf="!submitted">
+    <div style="width: 90%">
+      <mat-card class="flex-container">
+        <mat-card-title>Outfit Generator</mat-card-title>
+        <div>
+          <img class="small-card-image" src="{{outfitGenerated.topImage}}"><br>
+          <img class="small-card-image" src="{{outfitGenerated.bottomImage}}"><br>
+          <img class="small-card-image" src="{{outfitGenerated.footWearImage}}"><br>
+        </div>
+        <mat-card-actions>
+          <button mat-raised-button color="warn" (click)="saveOutfitGenerated()">Save</button>
+          <button mat-stroked-button color="warn" routerLink="/manager">Cancel</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <br>
+    <app-generator-top (chooseTop)="chooseTop($event)"></app-generator-top>
+    <br>
+    <app-generator-bottom (chooseBottom)="chooseBottom($event)"></app-generator-bottom>
+    <br>
+    <app-generator-foot-wear (chooseFootWear)="chooseFootWear($event)"></app-generator-foot-wear>
+    <br>
+  </div>
+  <div class="center">
+    <div *ngIf="submitted">
+      <mat-card>
+        <mat-card-title>Outfit was submitted successfully!</mat-card-title>
+        <mat-card-actions class="right">
+          <button mat-button class="rounded green" (click)="newOutfitGenerated()" routerLink="/manager">OK</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

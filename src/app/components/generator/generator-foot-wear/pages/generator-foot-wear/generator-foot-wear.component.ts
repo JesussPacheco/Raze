@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FootWearServices} from "../../services/foot-wear.services";
 import {FootWearModel} from "../../model/foot-wear.model";
 
@@ -13,6 +13,9 @@ export class GeneratorFootWearComponent implements OnInit {
   currentFootWear: FootWearModel = {};
   currentIndex = -1;
   name = '';
+
+  @Output() chooseFootWear = new EventEmitter<string>()
+
   constructor(private footWearServices: FootWearServices) { }
 
   ngOnInit(): void {
@@ -59,6 +62,7 @@ export class GeneratorFootWearComponent implements OnInit {
   }
   selectBottom(footWear: FootWearModel){
     console.log(footWear);
+    this.chooseFootWear.emit(footWear.image);
   }
 
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {TopModel} from "../../model/top.model";
 import {TopServices} from "../../services/top.services";
 
@@ -13,6 +13,8 @@ export class GeneratorTopComponent implements OnInit {
   currentTop: TopModel = {};
   currentIndex = -1;
   name = '';
+
+  @Output() chooseTop = new EventEmitter<string>()
 
   constructor(private topServices: TopServices) { }
 
@@ -60,5 +62,6 @@ export class GeneratorTopComponent implements OnInit {
   }
   selectTop(top: TopModel){
     console.log(top);
+    this.chooseTop.emit(top.image);
   }
 }
