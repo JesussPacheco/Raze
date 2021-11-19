@@ -8,7 +8,7 @@
       </button>
     </div>
     <div class="center">
-      <button mat-icon-button routerLink="/addOutfit" class="button">
+      <button mat-icon-button routerLink="/home/addOutfit" class="button">
         <mat-icon>add</mat-icon>
       </button>
     </div>
@@ -17,14 +17,14 @@
     <div class="flex-container">
       <div class="flex-items" *ngFor="let outfit of outfits; let i = index" [class.active]="i == currentIndex"
            (click)="setActiveTutorial(outfit, i)">
-        <mat-card>
+        <mat-card style="width:185px">
           <mat-card-title>{{outfit.name}}</mat-card-title>
           <img mat-card-lg-image src="{{outfit.img}}">
           <mat-card-content>
             <span>{{outfit.description}}</span>
           </mat-card-content>
           <mat-card-actions class="right">
-            <button mat-icon-button routerLink="/outfit/{{ currentOutfit.id}}">
+            <button mat-icon-button routerLink="/home/outfit/{{ outfit.id}}">
               <mat-icon>edit</mat-icon>
             </button>
           </mat-card-actions>

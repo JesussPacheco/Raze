@@ -68,6 +68,7 @@ export class InterestFeatureComponent implements OnInit {
         response => {
           console.log(response);
           this.message = response.message ? response.message : 'This interest was updated successfully!';
+          this.router.navigate(['/home/interests']);
         },
         error => {
           console.log(error);
@@ -79,7 +80,7 @@ export class InterestFeatureComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/interests']);
+          this.router.navigate(['/home/interests']);
         },
         error => {
           console.log(error);

@@ -22,7 +22,7 @@
   <br><br><br>
   <div class="col-md-6 list">
     <h4>My Interests List
-      <button mat-icon-button routerLink="/add-interest">
+      <button mat-icon-button routerLink="/home/add-interest">
         <mat-icon>add</mat-icon>
       </button>
     </h4>
@@ -52,7 +52,7 @@
         {{ currentInterest.published ? "Published" : "Pending" }}
       </div>
 
-      <a class="btn btn-light edit-button" routerLink="/interests/{{ currentInterest.id }}">
+      <a class="btn btn-light edit-button" routerLink="/home/interests/{{ currentInterest.id }}">
         Edit
       </a>
     </div>

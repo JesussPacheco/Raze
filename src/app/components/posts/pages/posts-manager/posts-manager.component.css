@@ -44,4 +44,11 @@
   cursor: pointer;
   border-radius: 50px;
 }
-
+.Image{
+  text-align: center;
+  height: 300px;
+  width: 100%;
+  margin-top: 40px;
+  object-fit: cover;
+  object-position: center;
+}

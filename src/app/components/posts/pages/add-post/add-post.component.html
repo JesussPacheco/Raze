@@ -1,14 +1,14 @@
 <div>
   <div class="center">
-    <div *ngIf="!submitted" class="size">
-      <mat-card>
+    <div *ngIf="!submitted" class="center size">
+      <mat-card style="width: 70%">
         <mat-card-title>New Post</mat-card-title>
         <mat-card-content>
 
           <div>
             <mat-label>Image</mat-label><br>
-            <div class="center">
-              <img src="{{images[0]}}" style="max-height: 100%">
+            <div class="">
+              <img class="Image" src="{{images[0]}}" style="max-height: 100%">
             </div>
             <div>
               <input type="file" name="img" (change)="uploadImage($event)" id="inputFile">
@@ -35,7 +35,7 @@
           </mat-form-field>
         </mat-card-content>
         <mat-card-actions class="right">
-          <button mat-button class="rounded red" routerLink="/posts">Cancel</button>
+          <button mat-button class="rounded red" routerLink="/home/posts">Cancel</button>
           <button mat-button (click)="saveTutorial()" class="rounded green">Public</button>
         </mat-card-actions>
       </mat-card>
@@ -45,7 +45,7 @@
         <mat-card>
           <mat-card-title>Tutorial was submitted successfully!</mat-card-title>
           <mat-card-actions class="right">
-            <button mat-button class="green" (click)="newPost()" routerLink="/posts">OK</button>
+            <button mat-button class="green" (click)="newPost()" routerLink="/home/posts">OK</button>
           </mat-card-actions>
         </mat-card>
       </div>

@@ -45,6 +45,7 @@ export class FashionFeatureComponent implements OnInit {
         response => {
           console.log(response);
           this.message = response.message ? response.message : 'This fashion was updated successfully!';
+          this.router.navigate(['/home/fashions']);
         },
         error => {
           console.log(error);
@@ -56,7 +57,7 @@ export class FashionFeatureComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/fashions']);
+          this.router.navigate(['/home/fashions']);
         },
         error => {
           console.log(error);
