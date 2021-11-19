@@ -1,4 +1,4 @@
-export interface User {
+export interface AuthenticateResponse {
   id: number;
   name: string;
   username: string;
@@ -6,9 +6,9 @@ export interface User {
   age: number;
   interestId: number;
   email: string;
-  //password?: string;
   userType: string;
   yearsExperience?: number;
   professionId?: number;
   roles: string[];
+  token: string;
 }
