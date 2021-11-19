@@ -22,31 +22,37 @@ import {AddTopComponent} from "../components/generator/generator-top/pages/add-t
 import {AddBottomComponent} from "../components/generator/generator-bottom/pages/add-bottom/add-bottom.component";
 import {AddFootWearComponent} from "../components/generator/generator-foot-wear/pages/add-foot-wear/add-foot-wear.component";
 import {ManagerComponent} from "../components/generator/generator-manager/pages/manager/manager.component";
+import {HomeComponent} from "../components/home/home.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'posts', pathMatch: 'full' },
-  {path:'posts',component:PostsManagerComponent},
-  {path:'post/:id',component:PostItemComponent},
-  {path:'add',component:AddPostComponent},
-  {path:'outfits',component:OutfitsManagerComponent},
-  {path:'outfit/:id',component:OutfitsItemComponent},
-  {path:'addOutfit',component:AddOutfitComponent},
-  {path:'outfit-types', component: OutfitTypesManagementComponent},
-  { path: 'fashions', component: FashionsListComponent },
-  { path: 'fashions/:id', component: FashionFeatureComponent },
-  { path: 'add-fashion', component: AddFashionComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent,  },
   { path: 'register', component: RegisterComponent,  },
-  { path: 'interests', component: InterestsListComponent },
-  { path: 'interests/:id', component: InterestFeatureComponent },
-  { path: 'add-interest', component: AddInterestComponent },
-  { path: 'outfit-type/:id',component: OutfitTypeItemComponent},
-  {path:'calendar',component:CalendarComponent},
-  {path:'generator', component:GeneratorManagerComponent},
-  {path:'addTop', component:AddTopComponent},
-  {path:'addBottom', component:AddBottomComponent},
-  {path:'addFootWear', component:AddFootWearComponent},
-  {path:'manager',component:ManagerComponent}
+  {path:'home',component:HomeComponent,
+    children:[
+      {path:'posts',component:PostsManagerComponent},
+      {path:'post/:id',component:PostItemComponent},
+      {path:'add',component:AddPostComponent},
+      {path:'outfits',component:OutfitsManagerComponent},
+      {path:'outfit/:id',component:OutfitsItemComponent},
+      {path:'addOutfit',component:AddOutfitComponent},
+      {path:'outfit-types', component: OutfitTypesManagementComponent},
+      { path: 'fashions', component: FashionsListComponent },
+      { path: 'fashions/:id', component: FashionFeatureComponent },
+      { path: 'add-fashion', component: AddFashionComponent },
+      { path: 'interests', component: InterestsListComponent },
+      { path: 'interests/:id', component: InterestFeatureComponent },
+      { path: 'add-interest', component: AddInterestComponent },
+      { path: 'outfit-type/:id',component: OutfitTypeItemComponent},
+      {path:'calendar',component:CalendarComponent},
+      {path:'generator', component:GeneratorManagerComponent},
+      {path:'addTop', component:AddTopComponent},
+      {path:'addBottom', component:AddBottomComponent},
+      {path:'addFootWear', component:AddFootWearComponent},
+      {path:'manager',component:ManagerComponent}
+    ]
+  },
+
 ];
 
 @NgModule({

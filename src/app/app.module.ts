@@ -34,6 +34,7 @@ import { GeneratorFootWearComponent } from './components/generator/generator-foo
 import { AddBottomComponent } from './components/generator/generator-bottom/pages/add-bottom/add-bottom.component';
 import { AddFootWearComponent } from './components/generator/generator-foot-wear/pages/add-foot-wear/add-foot-wear.component';
 import { ManagerComponent } from './components/generator/generator-manager/pages/manager/manager.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { ManagerComponent } from './components/generator/generator-manager/pages
     GeneratorFootWearComponent,
     AddBottomComponent,
     AddFootWearComponent,
-    ManagerComponent
+    ManagerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
