@@ -17,6 +17,7 @@ import {InterestFeatureComponent } from '../components/interest/pages/interest-f
 import { AddInterestComponent } from '../components/interest/pages/add-interest/add-interest.component';
 import {OutfitTypeItemComponent} from "../components/outfit-types/pages/outfit-type-item/outfit-type-item.component";
 import {CalendarComponent} from "../components/calendar/calendar.component";
+import {GeneratorManagerComponent} from "../components/generator/generator-manager/pages/generator-manager/generator-manager.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'posts', pathMatch: 'full' },
@@ -36,7 +37,8 @@ const routes: Routes = [
   { path: 'interests/:id', component: InterestFeatureComponent },
   { path: 'add-interest', component: AddInterestComponent },
   { path: 'outfit-type/:id',component: OutfitTypeItemComponent},
-  {path:'calendar',component:CalendarComponent}
+  {path:'calendar',component:CalendarComponent},
+  {path:'generator', component:GeneratorManagerComponent}
 ];
 
 @NgModule({

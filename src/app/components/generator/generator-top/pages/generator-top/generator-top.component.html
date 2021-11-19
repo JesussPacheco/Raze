@@ -1,0 +1,22 @@
+<div>
+  <div>
+    <div class="flex-container small-card">
+      <div class="center">
+        <button mat-icon-button routerLink="/addOutfit" class="button">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+      <div class="flex-items" *ngFor="let top of tops; let i = index" [class.active]="i == currentIndex">
+        <mat-card>
+          <mat-card-title>{{top.name}}</mat-card-title>
+          <img mat-card-lg-image src="{{top.image}}" class="small-card-image">
+          <mat-card-actions class="right">
+            <button mat-icon-button (click)="setActiveTop(top, i)">
+              <mat-icon>check</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

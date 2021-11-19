@@ -26,6 +26,11 @@ import { InterestFeatureComponent } from './components/interest/pages/interest-f
 import { InterestsListComponent } from './components/interest/pages/interests-list/interests-list.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { AddToCalendarModule } from 'add-events-to-google-calendar';
+import { GeneratorManagerComponent } from './components/generator/generator-manager/pages/generator-manager/generator-manager.component';
+import { GeneratorTopComponent } from './components/generator/generator-top/pages/generator-top/generator-top.component';
+import { AddTopComponent } from './components/generator/generator-top/pages/add-top/add-top/add-top.component';
+import { GeneratorBottomComponent } from './components/generator/generator-bottom/pages/generator-bottom/generator-bottom.component';
+import { GeneratorFootWearComponent } from './components/generator/generator-foot-wear/pages/generator-foot-wear/generator-foot-wear.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,12 @@ import { AddToCalendarModule } from 'add-events-to-google-calendar';
     AddInterestComponent,
     InterestFeatureComponent,
     InterestsListComponent,
-    CalendarComponent
+    CalendarComponent,
+    GeneratorManagerComponent,
+    GeneratorTopComponent,
+    AddTopComponent,
+    GeneratorBottomComponent,
+    GeneratorFootWearComponent
   ],
   imports: [
     BrowserModule,
