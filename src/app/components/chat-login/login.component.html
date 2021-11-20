@@ -1,0 +1,17 @@
+<div class="container">
+    <div ngbDropdown class="d-inline-block" *ngIf="userLogged|async as user; else btnIngresar">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+        <img style="border-radius: 100%;" *ngIf="user.photoURL" src="{{user.photoURL}}"
+             width="30" height="30" class="d-inline-block align-top" alt="">
+        {{user.displayName?user.displayName : user.email}}
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="logout()">Logout</button>
+      </div>
+    </div>
+
+    <ng-template #btnIngresar>
+      <button class="btn btn-outline-primary" (click)="loginWithGoogle()">Login for chat</button>
+    </ng-template>
+</div>
+<app-chat></app-chat>

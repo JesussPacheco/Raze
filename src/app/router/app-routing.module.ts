@@ -25,6 +25,8 @@ import {ManagerComponent} from "../components/generator/generator-manager/pages/
 import {HomeComponent} from "../components/home/home.component";
 import {ProfileComponent} from "../components/profile/pages/profile/profile.component";
 import {ProfileVisitedComponent} from "../components/profile/pages/profile-visited/profile-visited.component";
+import {ChatLoginComponent} from "../components/chat-login/login.component";
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -53,7 +55,8 @@ const routes: Routes = [
       {path:'addFootWear', component:AddFootWearComponent},
       {path:'manager',component:ManagerComponent},
       {path:'profile',component:ProfileComponent},
-      {path:'visited/:visitedId',component:ProfileVisitedComponent}
+      {path:'visited/:visitedId',component:ProfileVisitedComponent},
+      {path:"chat-login", component: ChatLoginComponent}
     ]
   },
 

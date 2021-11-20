@@ -1,0 +1,84 @@
+.cardContainer{
+  width: 300px;
+  height: 500px;
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+}
+.card-header{
+  background-color: #002C3E;
+  color: white;
+  font-weight: 700;
+  border: #a29696 1px solid;
+}
+.send_icon{
+  width: 20px;
+}
+.send_icon:active{
+  transform: scale(0.9);
+}
+.card-body{
+  padding: 0.5rem;
+  background-image: url("https://i.imgur.com/RtjmwJb.png");
+}
+
+.sent{
+  display: block;
+  float: right;
+  background-color: #0b93f6;
+  color: white;
+  min-width: 50.01%;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.received{
+  display: block;
+  float: left;
+  background-color: #e5e5ea;
+  color: black;
+  min-width: 50.01%;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.message_container{
+  overflow: scroll;
+  padding: 0.3rem;
+}
+
+.message_container::-webkit-scrollbar{
+  display: none;
+}
+.chatIconContainer{
+  position: fixed;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.chatIconContainer:hover{
+  transform: scale(0.95);
+  transition: 50ms;
+}
+
+.chatIcon{
+  width: 40px;
+  height: 40px;
+}
+
+.closeIcon{
+  position: absolute;
+  right: 0.5rem;
+  top:0rem;
+  cursor: pointer;
+}
+
+.form-control{
+
+}

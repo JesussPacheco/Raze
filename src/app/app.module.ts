@@ -38,6 +38,10 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/pages/profile/profile.component';
 import { ProfileVisitedComponent } from './components/profile/pages/profile-visited/profile-visited.component';
 import { PostCardComponent } from './components/posts/pages/post-card/post-card.component';
+import { ChatLoginComponent } from './components/chat-login/login.component';
+import { ChatComponent } from './components/chat/chat.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -70,7 +74,9 @@ import { PostCardComponent } from './components/posts/pages/post-card/post-card.
     HomeComponent,
     ProfileComponent,
     ProfileVisitedComponent,
-    PostCardComponent
+    PostCardComponent,
+    ChatLoginComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +88,8 @@ import { PostCardComponent } from './components/posts/pages/post-card/post-card.
     MaterialModule,
     ReactiveFormsModule,
     MaterialModule,
-    AddToCalendarModule
+    AddToCalendarModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],
   bootstrap: [AppComponent]
