@@ -1,4 +1,5 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {TopModel} from "../../model/top.model";
 import {TopServices} from "../../services/top.services";
 
@@ -13,13 +14,15 @@ export class GeneratorTopComponent implements OnInit {
   currentTop: TopModel = {};
   currentIndex = -1;
   name = '';
+  currentUserId=2;
 
   @Output() chooseTop = new EventEmitter<string>()
 
-  constructor(private topServices: TopServices) { }
+  constructor(private topServices: TopServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.retrieveTops()
+    this.routerTry();
   }
 
   retrieveTops(): void {
@@ -63,5 +66,11 @@ export class GeneratorTopComponent implements OnInit {
   selectTop(top: TopModel){
     console.log(top);
     this.chooseTop.emit(top.image);
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 }

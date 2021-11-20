@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import { FashionModel } from "../../model/fashion.model";
 import { FashionsService } from "../../services/fashions.service";
 
@@ -13,10 +14,18 @@ export class AddFashionComponent implements OnInit {
     name: ''
   };
   submitted = false;
+  currentUserId=2;
 
-  constructor(private fashionService: FashionsService) { }
+  constructor(private fashionService: FashionsService,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.routerTry();
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 
   saveFashion(): void {

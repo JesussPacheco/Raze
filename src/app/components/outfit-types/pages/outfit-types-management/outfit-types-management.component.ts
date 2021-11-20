@@ -3,6 +3,7 @@ import {OutfitType} from "../../model/outfit-type";
 import {OutfitTypesService} from "../../services/outfit-types.service";
 import {MatDialog} from "@angular/material/dialog";
 import {OutfitTypeItemComponent} from "../outfit-type-item/outfit-type-item.component";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-outfit-types-management',
@@ -14,14 +15,22 @@ export class OutfitTypesManagementComponent implements OnInit {
   title = 'Card View Demo';
   currentType: OutfitType = {};
   currentIndex = -1;
+  currentUserId=2;
 
   gridColumns = 3;
-  constructor(private OutfitTypesService:OutfitTypesService,public dialog: MatDialog,) {
+  constructor(private OutfitTypesService:OutfitTypesService,public dialog: MatDialog,public route: ActivatedRoute) {
     this.outfitTypes=[] as OutfitType[]
   }
 
   ngOnInit(): void {
     this.retrieveOutfitsTypes();
+    this.routerTry();
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
   openDialog() {
     const dialogRef = this.dialog.open(OutfitTypeItemComponent);

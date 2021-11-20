@@ -22,12 +22,14 @@ export class AddPostComponent implements OnInit {
   submitted = false;
   outfits?: OutfitModel[];
   images: any[]=[];
+  currentUserId=2;
 
   constructor(private postServices:PostsServices, private outfitServices:OutfitsServices,
               private  storageService: StorageServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.retrieveOutfit();
+    this.routerTry();
   }
 
   retrieveOutfit() : void {
@@ -82,5 +84,11 @@ export class AddPostComponent implements OnInit {
           this.post.img=imgUrl;
         })
     }
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 }

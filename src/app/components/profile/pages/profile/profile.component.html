@@ -4,6 +4,13 @@
       <div>
         <img class="my-avatar" src="{{user.imgProfile}}" alt="">
       </div>
+      <div>
+        <input type="file" name="img" (change)="uploadImage($event)" id="inputFile">
+        <label for="inputFile" class="labelInputFile center">
+          <mat-icon>camera_alt</mat-icon>
+        </label>
+        <button class="labelInputFile" (click)="updateUser()"><mat-icon>offline_pin</mat-icon></button>
+      </div>
     </div>
     <div class="center">
       <div>

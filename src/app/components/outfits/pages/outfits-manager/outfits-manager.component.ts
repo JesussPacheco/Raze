@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {OutfitModel} from "../../model/outfit.model";
 import {OutfitsServices} from "../../services/outfits.services";
 
@@ -13,11 +14,19 @@ export class OutfitsManagerComponent implements OnInit {
   currentOutfit: OutfitModel = {};
   currentIndex = -1;
   name = '';
-
-  constructor(private outfitsServices:OutfitsServices) { }
+  currentUserId=2;
+  gridColumns = 3;
+  constructor(private outfitsServices:OutfitsServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.retrieveOutfits()
+    this.retrieveOutfits();
+    this.routerTry();
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
   retrieveOutfits(): void {
     this.outfitsServices.getAll()

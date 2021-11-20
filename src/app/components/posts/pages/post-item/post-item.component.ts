@@ -16,12 +16,14 @@ export class PostItemComponent implements OnInit {
     description: '',
   };
   message = '';
+  currentUserId=2;
 
   constructor(private postsServices: PostsServices, public route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.message = '';
     this.getTutorial(this.route.snapshot.params.id);
+    this.routerTry();
   }
 
   getTutorial(id: string): void {
@@ -60,5 +62,11 @@ export class PostItemComponent implements OnInit {
         error => {
           console.log(error);
         });
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 }

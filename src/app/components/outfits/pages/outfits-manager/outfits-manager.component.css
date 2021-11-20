@@ -1,11 +1,14 @@
 .rounded{
   border-radius: 50px!important;
 }
+.card-title{
+  font-size: 150%;
+}
 .green{
   background-color: #002C3E;
 }
 .size{
-  width: 30%;
+  width: 50%;
 }
 .center {
   display: flex;
@@ -29,6 +32,7 @@
 .flex-items{
   margin-bottom: 40px;
 }
+
 .button{
   display: inline-block;
   text-decoration: none;
@@ -40,3 +44,12 @@
   cursor: pointer;
   border-radius: 50px;
 }
+.Image{
+  text-align: center;
+  height: 300px;
+  width: 100%;
+  margin-top: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+

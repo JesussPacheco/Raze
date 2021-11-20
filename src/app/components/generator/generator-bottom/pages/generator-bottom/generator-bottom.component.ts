@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {BottomModel} from "../../model/bottom.model";
 import {BottomServices} from "../../services/buttom.services";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-generator-bottom',
@@ -13,13 +14,15 @@ export class GeneratorBottomComponent implements OnInit {
   currentBottom: BottomModel = {};
   currentIndex = -1;
   name = '';
+  currentUserId=2;
 
   @Output() chooseBottom = new EventEmitter<string>()
 
-  constructor(private bottomService:BottomServices) { }
+  constructor(private bottomService:BottomServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.retrieveBottoms();
+    this.routerTry();
   }
 
   retrieveBottoms(): void {
@@ -64,5 +67,10 @@ export class GeneratorBottomComponent implements OnInit {
     console.log(bottom);
     this.chooseBottom.emit(bottom.image)
   }
-
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
+  }
 }

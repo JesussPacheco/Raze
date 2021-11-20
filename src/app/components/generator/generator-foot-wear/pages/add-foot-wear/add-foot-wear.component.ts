@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {FootWearModel} from "../../model/foot-wear.model";
 import {FootWearServices} from "../../services/foot-wear.services";
 import {FootWearStorageServices} from "../../services/foot-wear.storage.services";
@@ -16,10 +17,13 @@ export class AddFootWearComponent implements OnInit {
   };
   submitted=false;
   images: any[]=[];
+  currentUserId=2;
 
-  constructor(private footWearServices:FootWearServices, private storageServices:FootWearStorageServices) { }
+  constructor(private footWearServices:FootWearServices, private storageServices:FootWearStorageServices,public route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.routerTry();
   }
 
   saveFootWear(): void {
@@ -61,5 +65,11 @@ export class AddFootWearComponent implements OnInit {
           this.footWear.image=imgUrl;
         })
     }
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 }

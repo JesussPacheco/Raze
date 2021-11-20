@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import { FashionModel } from "../../model/fashion.model";
 import { FashionsService } from "../../services/fashions.service";
 
@@ -12,11 +13,19 @@ export class FashionsListComponent implements OnInit {
   currentFashion: FashionModel = {};
   currentIndex = -1;
   name = '';
+  currentUserId=2;
 
-  constructor(private fashiontService: FashionsService) { }
+  constructor(private fashiontService: FashionsService,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.retrieveFashions();
+    this.routerTry();
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 
   retrieveFashions(): void {

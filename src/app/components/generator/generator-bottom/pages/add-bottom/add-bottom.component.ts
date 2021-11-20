@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {BottomModel} from "../../model/bottom.model";
 import {BottomServices} from "../../services/buttom.services";
 import {BottomStorageService} from "../../services/bottom.storage.service";
@@ -16,10 +17,12 @@ export class AddBottomComponent implements OnInit {
   };
   submitted=false;
   images: any[]=[];
+  currentUserId=2;
 
-  constructor(private bottomServices: BottomServices, private storageService: BottomStorageService) { }
+  constructor(private bottomServices: BottomServices, private storageService: BottomStorageService,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.routerTry();
   }
 
   saveBottom(): void {
@@ -61,6 +64,12 @@ export class AddBottomComponent implements OnInit {
           this.bottom.image=imgUrl;
         })
     }
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 
 }

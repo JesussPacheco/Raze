@@ -15,6 +15,7 @@ export class PostsManagerComponent implements OnInit {
   currentIndex = -1;
   title = '';
   gridColumns = 3;
+  currentUserId=2;
   constructor(private postsServices:PostsServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -59,8 +60,10 @@ export class PostsManagerComponent implements OnInit {
           console.log(error);
         });
   }
-
   routerTry(){
-    console.log(this.route.snapshot.params['userId']);
+    this.route.parent?.params.subscribe(params=>{
+      this.currentUserId=params['userId'];
+      }
+    );
   }
 }

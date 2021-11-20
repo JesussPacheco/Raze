@@ -21,7 +21,7 @@
   </div>
   <br><br><br>
   <div class="col-md-6 list">
-    <h4>Fashions List<button mat-icon-button routerLink="/home/add-fashion">
+    <h4>Fashions List<button mat-icon-button routerLink="/home/{{currentUserId}}/add-fashion">
       <mat-icon>add</mat-icon>
     </button></h4>
     <ul class="list-group">
@@ -42,7 +42,7 @@
         <label><strong>Name:</strong></label> {{ currentFashion.name }}
       </div>
 
-      <a class="btn btn-light edit-button rounded" routerLink="/home/fashions/{{ currentFashion.id }}">
+      <a class="btn btn-light edit-button rounded" routerLink="/home/{{currentUserId}}/fashions/{{ currentFashion.id }}">
         Edit
       </a>
     </div>

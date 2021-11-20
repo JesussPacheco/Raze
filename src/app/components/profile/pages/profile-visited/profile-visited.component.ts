@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {UserModel} from "../../model/user.model";
 import {PostModel} from "../../../posts/model/post.model";
 import {UserService} from "../../services/user.service";
@@ -23,7 +24,7 @@ export class ProfileVisitedComponent implements OnInit {
   currentIndex = -1;
   gridColumns = 3;
 
-  constructor(private userService: UserService, private postsServices:PostsServices) { }
+  constructor(private userService: UserService, private postsServices:PostsServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.retrieveUser();
@@ -31,7 +32,7 @@ export class ProfileVisitedComponent implements OnInit {
   }
 
   retrieveUser():void{
-    this.userService.get(2)
+    this.userService.get(this.route.snapshot.params['visitedId'])
       .subscribe(data=>{
         this.user=data;
         console.log(data);

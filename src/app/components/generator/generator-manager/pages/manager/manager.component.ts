@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {OutfitGeneratedModel} from "../../model/outfit-generated.model";
 import {TopModel} from "../../../generator-top/model/top.model";
 import {OutfitGeneratedServices} from "../../services/outfit-generated.services";
@@ -14,11 +15,12 @@ export class ManagerComponent implements OnInit {
   currentOutfitGenerated: OutfitGeneratedModel = {};
   currentIndex = -1;
   name = '';
-
-  constructor(private outfitGeneratedServices : OutfitGeneratedServices) { }
+  currentUserId=2;
+  constructor(private outfitGeneratedServices : OutfitGeneratedServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.retrieveOutfitsGenerated();
+    this.routerTry();
   }
 
   retrieveOutfitsGenerated(): void {
@@ -61,5 +63,11 @@ export class ManagerComponent implements OnInit {
   }
   selectTop(top: TopModel){
     console.log(top);
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 }

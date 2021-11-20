@@ -14,6 +14,7 @@ export class FashionFeatureComponent implements OnInit {
     name: ''
   };
   message = '';
+  currentUserId=2;
 
   constructor(
     private fashionService: FashionsService,
@@ -23,8 +24,15 @@ export class FashionFeatureComponent implements OnInit {
   ngOnInit(): void {
     this.message = '';
     this.getFashion(this.route.snapshot.params.id);
+    this.routerTry();
   }
 
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
+  }
   getFashion(id: string): void {
     this.fashionService.get(id)
       .subscribe(
@@ -45,7 +53,6 @@ export class FashionFeatureComponent implements OnInit {
         response => {
           console.log(response);
           this.message = response.message ? response.message : 'This fashion was updated successfully!';
-          this.router.navigate(['/home/fashions']);
         },
         error => {
           console.log(error);
@@ -57,7 +64,6 @@ export class FashionFeatureComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/home/fashions']);
         },
         error => {
           console.log(error);

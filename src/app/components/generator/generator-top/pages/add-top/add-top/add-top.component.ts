@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {TopModel} from "../../../model/top.model";
 import {TopServices} from "../../../services/top.services";
 import {TopStorageServices} from "../../../services/top.storage.services";
@@ -16,10 +17,12 @@ export class AddTopComponent implements OnInit {
   };
   submitted=false;
   images: any[]=[];
+  currentUserId=2;
 
-  constructor(private topServices: TopServices, private storageService:TopStorageServices) { }
+  constructor(private topServices: TopServices, private storageService:TopStorageServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.routerTry();
   }
 
   saveTop(): void {
@@ -61,5 +64,11 @@ export class AddTopComponent implements OnInit {
           this.top.image=imgUrl;
         })
     }
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 }

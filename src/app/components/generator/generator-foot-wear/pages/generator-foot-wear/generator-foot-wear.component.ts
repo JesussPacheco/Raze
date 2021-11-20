@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FootWearServices} from "../../services/foot-wear.services";
 import {FootWearModel} from "../../model/foot-wear.model";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-generator-foot-wear',
@@ -13,13 +14,15 @@ export class GeneratorFootWearComponent implements OnInit {
   currentFootWear: FootWearModel = {};
   currentIndex = -1;
   name = '';
+  currentUserId=2;
 
   @Output() chooseFootWear = new EventEmitter<string>()
 
-  constructor(private footWearServices: FootWearServices) { }
+  constructor(private footWearServices: FootWearServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.retrieveFootWears();
+    this.routerTry();
   }
 
   retrieveFootWears(): void {
@@ -63,6 +66,12 @@ export class GeneratorFootWearComponent implements OnInit {
   selectBottom(footWear: FootWearModel){
     console.log(footWear);
     this.chooseFootWear.emit(footWear.image);
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 
 }

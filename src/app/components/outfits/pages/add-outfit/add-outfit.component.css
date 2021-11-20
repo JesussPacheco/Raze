@@ -16,6 +16,7 @@
 }
 .center {
   display: flex;
+  margin-top: 200px;
   height: 400px;
   justify-content: center;
   align-items: center;
@@ -25,4 +26,13 @@
   height: auto;
   justify-content: right;
   align-items: center;
+}
+
+.Image{
+  text-align: center;
+  height: 500px;
+  width: 100%;
+  margin-top: 40px;
+  object-fit: cover;
+  object-position: 50% 10%;
 }

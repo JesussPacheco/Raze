@@ -8,7 +8,7 @@
       </button>
     </div>
     <div class="center">
-      <button mat-icon-button routerLink="/home/add/{{this.route.snapshot.params['userId']}}" class="button">
+      <button mat-icon-button routerLink="/home/{{currentUserId}}/add" class="button">
         <mat-icon>add</mat-icon>
       </button>
     </div>
@@ -24,10 +24,12 @@
             <span>{{post.description}}</span>
           </mat-card-content>
           <mat-card-actions class="right">
-            <button mat-icon-button routerLink="/home/post/{{this.route.snapshot.params['userId']}}/{{ post.id }}">
+            <button *ngIf="currentUserId==post.userId" mat-icon-button
+                    routerLink="/home/{{currentUserId}}/post/{{ post.id }}">
               <mat-icon>edit</mat-icon>
             </button>
-            <button mat-button class="rounded green button" routerLink="/home/visited">
+            <button *ngIf="currentUserId!=post.userId" mat-button
+                    class="rounded green button" routerLink="/home/{{currentUserId}}/visited/{{post.userId}}">
               Contact
             </button>
           </mat-card-actions>

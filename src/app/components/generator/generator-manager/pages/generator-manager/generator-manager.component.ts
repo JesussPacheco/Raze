@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {OutfitGeneratedModel} from "../../model/outfit-generated.model";
 import {OutfitGeneratedServices} from "../../services/outfit-generated.services";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-generator-manager',
@@ -15,10 +16,12 @@ export class GeneratorManagerComponent implements OnInit {
     footWearImage:'https://wallpaperaccess.com/full/1668898.jpg'
   };
   submitted = false;
+  currentUserId=2;
 
-  constructor(private outfitGeneratedServices: OutfitGeneratedServices) { }
+  constructor(private outfitGeneratedServices: OutfitGeneratedServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.routerTry();
   }
 
   saveOutfitGenerated(): void {
@@ -60,4 +63,10 @@ export class GeneratorManagerComponent implements OnInit {
     this.outfitGenerated.footWearImage=footWearImage;
   }
 
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
+  }
 }

@@ -38,12 +38,14 @@
       class="btn btn-light"
       (click)="updatePublished(true)">Publish</button>
 
-    <button class="btn btn-light wb2" (click)="deleteInterest()">Delete</button>
+    <button class="btn btn-light wb2" (click)="deleteInterest()" routerLink="/home/{{currentUserId}}/interests">Delete</button>
 
     <button
       type="submit"
       class="btn btn-light wb2"
-      (click)="updateInterest()">Update</button>
+      (click)="updateInterest()"
+      routerLink="/home/{{currentUserId}}/interests"
+    >Update</button>
     <p>{{ message }}</p>
   </div>
 

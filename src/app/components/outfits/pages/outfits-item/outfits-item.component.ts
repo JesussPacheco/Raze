@@ -15,11 +15,19 @@ export class OutfitsItemComponent implements OnInit {
     img:'',
     description: '',
   };
+  currentUserId=2;
 
   constructor(private outfitsServices: OutfitsServices, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.getTutorial(this.route.snapshot.params.id);
+    this.routerTry();
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
   getTutorial(id: string): void {
     this.outfitsServices.get(id)

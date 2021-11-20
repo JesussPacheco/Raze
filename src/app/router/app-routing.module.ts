@@ -30,11 +30,11 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent,  },
   { path: 'register', component: RegisterComponent,  },
-  {path:'home',component:HomeComponent,
+  {path:'home/:userId',component:HomeComponent,
     children:[
-      {path:'posts/:userId',component:PostsManagerComponent},
-      {path:'post/:userId/:id',component:PostItemComponent},
-      {path:'add/:userId',component:AddPostComponent},
+      {path:'posts',component:PostsManagerComponent},
+      {path:'post/:id',component:PostItemComponent},
+      {path:'add',component:AddPostComponent},
       {path:'outfits',component:OutfitsManagerComponent},
       {path:'outfit/:id',component:OutfitsItemComponent},
       {path:'addOutfit',component:AddOutfitComponent},
@@ -53,7 +53,7 @@ const routes: Routes = [
       {path:'addFootWear', component:AddFootWearComponent},
       {path:'manager',component:ManagerComponent},
       {path:'profile',component:ProfileComponent},
-      {path:'visited',component:ProfileVisitedComponent}
+      {path:'visited/:visitedId',component:ProfileVisitedComponent}
     ]
   },
 

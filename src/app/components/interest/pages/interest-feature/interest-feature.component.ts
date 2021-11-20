@@ -16,6 +16,7 @@ export class InterestFeatureComponent implements OnInit {
     published: false
   };
   message = '';
+  currentUserId=2;
 
   constructor(
     private interestService: InterestService,
@@ -25,6 +26,13 @@ export class InterestFeatureComponent implements OnInit {
   ngOnInit(): void {
     this.message = '';
     this.getInterest(this.route.snapshot.params.id);
+    this.routerTry();
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 
   getInterest(id: string): void {
@@ -68,7 +76,6 @@ export class InterestFeatureComponent implements OnInit {
         response => {
           console.log(response);
           this.message = response.message ? response.message : 'This interest was updated successfully!';
-          this.router.navigate(['/home/interests']);
         },
         error => {
           console.log(error);
@@ -80,7 +87,6 @@ export class InterestFeatureComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.router.navigate(['/home/interests']);
         },
         error => {
           console.log(error);

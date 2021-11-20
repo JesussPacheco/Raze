@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import { Interest } from 'src/app/components/interest/model/interest.model';
 import { InterestService } from 'src/app/components/interest/services/interest.service';
 
@@ -13,11 +14,19 @@ export class InterestsListComponent implements OnInit {
   currentInterest: Interest = {};
   currentIndex = -1;
   title = '';
+  currentUserId=2;
 
-  constructor(private interestService: InterestService) { }
+  constructor(private interestService: InterestService,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.retrieveInterests();
+    this.routerTry();
+  }
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.currentUserId=params['userId'];
+      }
+    );
   }
 
   retrieveInterests(): void {

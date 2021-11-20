@@ -3,6 +3,7 @@ import {UserModel} from "../../model/user.model";
 import {UserService} from "../../services/user.service";
 import {PostModel} from "../../../posts/model/post.model";
 import {PostsServices} from "../../../posts/services/posts.services";
+import {UserStorageServices} from "../../services/user-storage.services";
 
 @Component({
   selector: 'app-profile',
@@ -22,8 +23,13 @@ export class ProfileComponent implements OnInit {
   currentPost: PostModel = {};
   currentIndex = -1;
   gridColumns = 3;
+  images: any[]=[];
 
-  constructor(private userService: UserService, private postsServices:PostsServices) { }
+  constructor(
+    private userService: UserService,
+    private postsServices:PostsServices,
+    private storageService:UserStorageServices
+  ) { }
 
   ngOnInit(): void {
     this.retrieveUser();
@@ -37,6 +43,15 @@ export class ProfileComponent implements OnInit {
         console.log(data);
       },error => {
         console.log(error);
+      })
+  }
+
+  updateUser():void{
+    this.userService.update(this.user.id,this.user)
+      .subscribe(data=>{
+        console.log(data);
+      },error => {
+        console.log(error)
       })
   }
 
@@ -61,6 +76,22 @@ export class ProfileComponent implements OnInit {
   setActiveTutorial(post: PostModel, index: number): void {
     this.currentPost = post;
     this.currentIndex = index;
+  }
+
+  uploadImage(event: any){
+    let files = event.target.files;
+    let reader = new FileReader()
+
+    reader.readAsDataURL(files[0]);
+    reader.onloadend=()=>{
+
+      console.log(reader.result)
+      this.images.push(reader.result);
+      this.storageService.uploadImage("image"+"_"+Date.now(),reader.result)
+        .then(imgUrl=>{
+          this.user.imgProfile=imgUrl;
+        })
+    }
   }
 
 }

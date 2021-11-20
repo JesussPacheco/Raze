@@ -14,14 +14,14 @@
       </div>
 
       <button (click)="saveFashion()" class="btn btn-light">Save</button>
-      <a routerLink="/home/fashions" class="btn btn-light-2">Cancel</a>
+      <a routerLink="/home/{{currentUserId}}/fashions" class="btn btn-light-2">Cancel</a>
     </div>
 
     <div *ngIf="submitted">
       <br>
       <h4 class="confirmation-text">New fashion was submitted successfully!</h4>
       <br>
-      <a  class="btn btn-light continue-btn" routerLink="/home/fashions">Continue</a>
+      <a  class="btn btn-light continue-btn" routerLink="/home/{{currentUserId}}/fashions">Continue</a>
     </div>
   </div>
 </div>
