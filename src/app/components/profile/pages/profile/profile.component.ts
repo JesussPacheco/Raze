@@ -66,7 +66,7 @@ export class ProfileComponent implements OnInit {
   }
 
   retrievePosts(): void {
-    this.postsServices.findByUser(1)
+    this.postsServices.findByUser(this.user.id)
       .subscribe(
         data => {
           this.posts = data;

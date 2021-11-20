@@ -71,9 +71,8 @@ export class RegisterComponent implements OnInit {
   }
 
   onLogin(){
-    this.router.navigate(['home/login']);
+    this.router.navigate(['/login']);
   }
-
   onRegister(): void {
     let data = {}
     if (this.registerForm.controls['user_type'].value === 'Advised'){
@@ -104,6 +103,7 @@ export class RegisterComponent implements OnInit {
     this.userService.create(data)
       .subscribe(response => {
         console.log(response);
+        this.router.navigate([`/home/${response.id}/posts`]);
       },
         error => {
           console.log(error);

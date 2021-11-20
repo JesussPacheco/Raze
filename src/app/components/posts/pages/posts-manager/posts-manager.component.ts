@@ -38,7 +38,7 @@ export class PostsManagerComponent implements OnInit {
   }
 
   retrieveUser(): void{
-    this.userService.get(this.route.snapshot.params.id)
+    this.userService.get(this.currentUserId)
       .subscribe(data => {
         this.currentUser = data;
         console.log(this.currentUser);

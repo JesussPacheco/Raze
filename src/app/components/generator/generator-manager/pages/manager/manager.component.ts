@@ -46,7 +46,7 @@ export class ManagerComponent implements OnInit {
     this.currentIndex = index;
     this.selectTop(top);
   }
-  
+
   selectTop(top: TopModel){
     console.log(top);
   }

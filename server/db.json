@@ -331,6 +331,17 @@
       "professionId": "1",
       "premium": true,
       "yearsExperience": 3
+    },
+    {
+      "name": "kevin",
+      "username": "Kevin23",
+      "age": 20,
+      "interestId": "1",
+      "email": "kevin@email.com",
+      "password": "kevin10203040",
+      "userType": "Advised",
+      "id": 5,
+      "imgProfile": "https://firebasestorage.googleapis.com/v0/b/openraze-cb5bb.appspot.com/o/users%2Fimage_1637432716020?alt=media&token=d5ad18b8-663c-4b7d-9e93-eabe4ba3627c"
     }
   ]
 }
