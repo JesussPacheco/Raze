@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {UserModel} from "../../model/user.model";
 import {UserService} from "../../services/user.service";
 import {PostModel} from "../../../posts/model/post.model";
@@ -28,16 +29,25 @@ export class ProfileComponent implements OnInit {
   constructor(
     private userService: UserService,
     private postsServices:PostsServices,
-    private storageService:UserStorageServices
+    private storageService:UserStorageServices,
+    public route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    this.routerTry();
     this.retrieveUser();
     this.retrievePosts();
   }
 
+  routerTry(){
+    this.route.parent?.params.subscribe(params=>{
+        this.user.id=params['userId'];
+      }
+    );
+  }
+
   retrieveUser():void{
-    this.userService.get(1)
+    this.userService.get(this.user.id)
       .subscribe(data=>{
         this.user=data;
         console.log(data);
