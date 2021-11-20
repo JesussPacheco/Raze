@@ -38,10 +38,11 @@ import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/pages/profile/profile.component';
 import { ProfileVisitedComponent } from './components/profile/pages/profile-visited/profile-visited.component';
 import { PostCardComponent } from './components/posts/pages/post-card/post-card.component';
-import { ChatLoginComponent } from './components/chat-login/login.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
+import { ChatAccessComponent } from './components/chat-access/chat-access.component';
+import {NgbDropdownModule} from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [
@@ -75,8 +76,8 @@ import { environment } from 'src/environments/environment';
     ProfileComponent,
     ProfileVisitedComponent,
     PostCardComponent,
-    ChatLoginComponent,
-    ChatComponent
+    ChatComponent,
+    ChatAccessComponent
   ],
   imports: [
     BrowserModule,
@@ -89,7 +90,8 @@ import { environment } from 'src/environments/environment';
     ReactiveFormsModule,
     MaterialModule,
     AddToCalendarModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    NgbDropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

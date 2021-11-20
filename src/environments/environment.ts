@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: "AIzaSyCffcAeo-N-R6JY9bIg2CoUIb71WVxUCKU",
-    authDomain: "raze-open.firebaseapp.com",
-    projectId: "raze-open",
-    storageBucket: "raze-open.appspot.com",
-    messagingSenderId: "410009506825",
-    appId: "1:410009506825:web:09203d5b3a3f30ad28d4d8"
+    apiKey: "AIzaSyDshUzzJWI-rX-w0bsnK4A742nnMrTalfA",
+    authDomain: "openraze-cb5bb.firebaseapp.com",
+    projectId: "openraze-cb5bb",
+    storageBucket: "openraze-cb5bb.appspot.com",
+    messagingSenderId: "531105279918",
+    appId: "1:531105279918:web:ac96968c677208123ea23f"
   }
 };
 

@@ -25,7 +25,7 @@ import {ManagerComponent} from "../components/generator/generator-manager/pages/
 import {HomeComponent} from "../components/home/home.component";
 import {ProfileComponent} from "../components/profile/pages/profile/profile.component";
 import {ProfileVisitedComponent} from "../components/profile/pages/profile-visited/profile-visited.component";
-import {ChatLoginComponent} from "../components/chat-login/login.component";
+import {ChatAccessComponent} from "../components/chat-access/chat-access.component";
 
 
 const routes: Routes = [
@@ -56,7 +56,7 @@ const routes: Routes = [
       {path:'manager',component:ManagerComponent},
       {path:'profile',component:ProfileComponent},
       {path:'visited/:visitedId',component:ProfileVisitedComponent},
-      {path:"chat-login", component: ChatLoginComponent}
+      {path:'chat-login',component:ChatAccessComponent}
     ]
   },
 
