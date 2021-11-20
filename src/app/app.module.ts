@@ -36,6 +36,7 @@ import { AddFootWearComponent } from './components/generator/generator-foot-wear
 import { ManagerComponent } from './components/generator/generator-manager/pages/manager/manager.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/pages/profile/profile.component';
+import { ProfileVisitedComponent } from './components/profile/pages/profile-visited/profile-visited.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { ProfileComponent } from './components/profile/pages/profile/profile.com
     AddFootWearComponent,
     ManagerComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    ProfileVisitedComponent
   ],
   imports: [
     BrowserModule,

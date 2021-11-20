@@ -1,22 +1,25 @@
 <div>
   <div>
     <div class="center">
-      <input class=" form-control rounded size" type="text" placeholder="Search by title" [(ngModel)]="title"/>
-
-      <button mat-icon-button (click)="searchTitle()">
-        <mat-icon>search</mat-icon>
-      </button>
+      <div>
+        <img class="my-avatar" src="{{user.imgProfile}}" alt="">
+      </div>
     </div>
     <div class="center">
-      <button mat-icon-button routerLink="/home/add/{{this.route.snapshot.params['userId']}}" class="button">
-        <mat-icon>add</mat-icon>
-      </button>
+      <div>
+        <h2>UserName: {{user.username}}</h2>
+        <h3>Name: {{user.name}}</h3>
+      </div>
+    </div>
+    <div class="center">
+      <app-calendar></app-calendar>
     </div>
   </div>
+  <br>
   <div>
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
       <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let post of posts; let i = index" [class.active]="i == currentIndex"
-        (click)="setActiveTutorial(post, i)">
+           (click)="setActiveTutorial(post, i)">
         <mat-card>
           <mat-card-title class="card-title">{{post.title}}</mat-card-title>
           <img class="Image" src="{{post.img}}">
@@ -24,9 +27,6 @@
             <span>{{post.description}}</span>
           </mat-card-content>
           <mat-card-actions class="right">
-            <button mat-icon-button routerLink="/home/post/{{this.route.snapshot.params['userId']}}/{{ post.id }}">
-              <mat-icon>edit</mat-icon>
-            </button>
             <button mat-button class="rounded green button" routerLink="/home/visited">
               Contact
             </button>

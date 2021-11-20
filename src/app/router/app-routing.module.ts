@@ -14,7 +14,7 @@ import {LoginComponent} from "../components/login/pages/login/login.component";
 import {RegisterComponent} from "../components/login/pages/register/register.component";
 import {InterestsListComponent } from '../components/interest/pages/interests-list/interests-list.component';
 import {InterestFeatureComponent } from '../components/interest/pages/interest-feature/interest-feature.component';
-import { AddInterestComponent } from '../components/interest/pages/add-interest/add-interest.component';
+import {AddInterestComponent } from '../components/interest/pages/add-interest/add-interest.component';
 import {OutfitTypeItemComponent} from "../components/outfit-types/pages/outfit-type-item/outfit-type-item.component";
 import {CalendarComponent} from "../components/calendar/calendar.component";
 import {GeneratorManagerComponent} from "../components/generator/generator-manager/pages/generator-manager/generator-manager.component";
@@ -24,6 +24,7 @@ import {AddFootWearComponent} from "../components/generator/generator-foot-wear/
 import {ManagerComponent} from "../components/generator/generator-manager/pages/manager/manager.component";
 import {HomeComponent} from "../components/home/home.component";
 import {ProfileComponent} from "../components/profile/pages/profile/profile.component";
+import {ProfileVisitedComponent} from "../components/profile/pages/profile-visited/profile-visited.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -51,7 +52,8 @@ const routes: Routes = [
       {path:'addBottom', component:AddBottomComponent},
       {path:'addFootWear', component:AddFootWearComponent},
       {path:'manager',component:ManagerComponent},
-      {path:'profile',component:ProfileComponent}
+      {path:'profile',component:ProfileComponent},
+      {path:'visited',component:ProfileVisitedComponent}
     ]
   },
 

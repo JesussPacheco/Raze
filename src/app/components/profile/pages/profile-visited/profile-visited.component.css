@@ -1,0 +1,64 @@
+.rounded{
+  border-radius: 50px!important;
+}
+.card-title{
+  font-size: 150%;
+}
+.green{
+  background-color: #002C3E;
+}
+.size{
+  width: 50%;
+}
+.right{
+  display: flex;
+  height: auto;
+  justify-content: right;
+  align-items: center;
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-items{
+  margin-bottom: 40px;
+}
+
+.button{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #002C3E;
+  font-size: 13px;
+  background: #002C3E;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.Image{
+  text-align: center;
+  height: 300px;
+  width: 100%;
+  margin-top: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+.my-avatar{
+  text-align: center;
+  height: 170px;
+  width: 170px;
+  border-radius: 100%;
+  margin-top: 40px;
+  object-fit: cover;
+  object-position: center;
+  margin-right: auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

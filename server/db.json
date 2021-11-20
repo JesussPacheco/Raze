@@ -29,19 +29,22 @@
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "Clothes for training",
       "id": 5,
-      "outfitId": 1
+      "outfitId": 1,
+      "userId": 2
     },
     {
       "title": "New post",
       "img": "https://www.outfittrends.com/wp-content/uploads/2015/06/77d9dc2801738d0fd934db8863f6f8a2.jpg",
       "description": "Best Color for this sprint",
-      "id": 6
+      "id": 6,
+      "userId": 2
     },
     {
       "title": "prueba5",
       "img": "https://firebasestorage.googleapis.com/v0/b/openraze-cb5bb.appspot.com/o/posts%2Fimage_1636859540218?alt=media&token=d2023f9b-4904-48a0-90ab-a5baacbd343e",
       "description": "prueba de imagen",
-      "id": 7
+      "id": 7,
+      "userId": 2
     }
   ],
   "Outfits": [
@@ -266,9 +269,23 @@
       "premium": true,
       "userType": "advised",
       "username": "kevin",
-      "yearsExperience": 12,
+      "yearsExperience": 2,
       "interestId": 1,
       "professionId": 1
+    },
+    {
+      "id": 2,
+      "age": 20,
+      "email": "email@email.com",
+      "imgProfile": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "name": "Jose Luis",
+      "password": "password",
+      "premium": true,
+      "userType": "advisor",
+      "username": "Pepe",
+      "yearsExperience": 3,
+      "interestId": 1,
+      "professionId": 2
     }
   ]
 }
