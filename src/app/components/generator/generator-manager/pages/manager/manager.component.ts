@@ -19,12 +19,12 @@ export class ManagerComponent implements OnInit {
   constructor(private outfitGeneratedServices : OutfitGeneratedServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.retrieveOutfitsGenerated();
     this.routerTry();
+    this.retrieveOutfitsGenerated();
   }
 
   retrieveOutfitsGenerated(): void {
-    this.outfitGeneratedServices.getAll()
+    this.outfitGeneratedServices.findByUser(this.currentUserId)
       .subscribe(
         data => {
           this.outfitsGenerated = data;
@@ -46,21 +46,7 @@ export class ManagerComponent implements OnInit {
     this.currentIndex = index;
     this.selectTop(top);
   }
-
-  searchTitle(): void {
-    this.currentOutfitGenerated = {};
-    this.currentIndex = -1;
-
-    this.outfitGeneratedServices.findByName(this.name)
-      .subscribe(
-        data => {
-          this.outfitsGenerated = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
-  }
+  
   selectTop(top: TopModel){
     console.log(top);
   }

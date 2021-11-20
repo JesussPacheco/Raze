@@ -3,4 +3,5 @@ export class OutfitGeneratedModel{
   topImage?:string;
   bottomImage?:string;
   footWearImage?:string;
+  userId?:number;
 }

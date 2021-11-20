@@ -18,6 +18,7 @@ export class AddPostComponent implements OnInit {
     title: '',
     img:'',
     description: '',
+    userId:0,
   };
   submitted = false;
   outfits?: OutfitModel[];
@@ -48,7 +49,8 @@ export class AddPostComponent implements OnInit {
     const data = {
       title: this.post.title,
       img:this.post.img,
-      description: this.post.description
+      description: this.post.description,
+      userId: Number(this.currentUserId)
     };
 
     this.postServices.create(data)

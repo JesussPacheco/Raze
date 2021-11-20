@@ -32,7 +32,7 @@ export class OutfitGeneratedServices{
     return this.http.delete(`${baseUrl}/${id}`);
   }
 
-  findByName(name: any): Observable<OutfitGeneratedModel[]> {
-    return this.http.get<OutfitGeneratedModel[]>(`${baseUrl}?name=${name}`);
+  findByUser(userId: any): Observable<OutfitGeneratedModel[]> {
+    return this.http.get<OutfitGeneratedModel[]>(`${baseUrl}?userId=${userId}`);
   }
 }

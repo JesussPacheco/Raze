@@ -13,7 +13,8 @@ export class GeneratorManagerComponent implements OnInit {
   outfitGenerated: OutfitGeneratedModel={
     topImage:'https://wallpaperaccess.com/full/1668898.jpg',
     bottomImage:'https://wallpaperaccess.com/full/1668898.jpg',
-    footWearImage:'https://wallpaperaccess.com/full/1668898.jpg'
+    footWearImage:'https://wallpaperaccess.com/full/1668898.jpg',
+    userId:0
   };
   submitted = false;
   currentUserId=2;
@@ -28,7 +29,8 @@ export class GeneratorManagerComponent implements OnInit {
     const data = {
       topImage: this.outfitGenerated.topImage,
       bottomImage: this.outfitGenerated.bottomImage,
-      footWearImage:  this.outfitGenerated.footWearImage
+      footWearImage:  this.outfitGenerated.footWearImage,
+      userId: Number(this.currentUserId)
     };
 
     this.outfitGeneratedServices.create(data)
