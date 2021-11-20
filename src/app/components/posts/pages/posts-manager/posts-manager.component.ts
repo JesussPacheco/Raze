@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {PostModel} from "../../model/post.model";
 import {PostsServices} from "../../services/posts.services";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
+import {User} from "../../../security/model/user.model";
+import {UserService} from "../../../security/services/user.service";
 
 @Component({
   selector: 'app-posts-manager',
@@ -16,11 +18,34 @@ export class PostsManagerComponent implements OnInit {
   title = '';
   gridColumns = 3;
   currentUserId=2;
-  constructor(private postsServices:PostsServices,public route: ActivatedRoute) { }
+  currentUser: User = {
+    age: 0,
+    email: "",
+    id: 0,
+    imgProfile: "",
+    interestId: 0,
+    name: "",
+    roles: [],
+    userType: "",
+    username: ""
+  };
+  constructor(private route: ActivatedRoute, private router: Router, private postsServices:PostsServices, private userService:UserService) {  }
 
   ngOnInit(): void {
     this.retrievePosts()
     this.routerTry();
+    this.retrieveUser();
+  }
+
+  retrieveUser(): void{
+    this.userService.get(this.route.snapshot.params.id)
+      .subscribe(data => {
+        this.currentUser = data;
+        console.log(this.currentUser);
+      },
+        error => {
+          console.log(error);
+        });
   }
 
   retrievePosts(): void {

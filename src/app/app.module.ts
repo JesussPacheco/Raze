@@ -37,6 +37,7 @@ import { ManagerComponent } from './components/generator/generator-manager/pages
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/pages/profile/profile.component';
 import { ProfileVisitedComponent } from './components/profile/pages/profile-visited/profile-visited.component';
+import { PostCardComponent } from './components/posts/pages/post-card/post-card.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { ProfileVisitedComponent } from './components/profile/pages/profile-visi
     ManagerComponent,
     HomeComponent,
     ProfileComponent,
-    ProfileVisitedComponent
+    ProfileVisitedComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,

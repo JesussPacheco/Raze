@@ -3,6 +3,6 @@ export class PostModel{
   title?:string;
   img?:string;
   description?:string;
-  outfitId?: any;
-  userId?:number;
+  outfitId?: number;
+  userId?: number;
 }
