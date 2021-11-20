@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {PostModel} from "../../model/post.model";
 import {PostsServices} from "../../services/posts.services";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-posts-manager',
@@ -14,10 +15,11 @@ export class PostsManagerComponent implements OnInit {
   currentIndex = -1;
   title = '';
   gridColumns = 3;
-  constructor(private postsServices:PostsServices) { }
+  constructor(private postsServices:PostsServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.retrievePosts()
+    this.routerTry();
   }
 
   retrievePosts(): void {
@@ -56,5 +58,9 @@ export class PostsManagerComponent implements OnInit {
         error => {
           console.log(error);
         });
+  }
+
+  routerTry(){
+    console.log(this.route.snapshot.params['userId']);
   }
 }

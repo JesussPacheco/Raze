@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
 import {PostModel} from "../../model/post.model";
 import {PostsServices} from "../../services/posts.services";
 import {OutfitModel} from "../../../outfits/model/outfit.model";
 import {OutfitsServices} from "../../../outfits/services/outfits.services";
 import {StorageServices} from "../../services/storage.services";
+
 
 @Component({
   selector: 'app-add-post',
@@ -22,7 +24,7 @@ export class AddPostComponent implements OnInit {
   images: any[]=[];
 
   constructor(private postServices:PostsServices, private outfitServices:OutfitsServices,
-              private  storageService: StorageServices) { }
+              private  storageService: StorageServices,public route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.retrieveOutfit();

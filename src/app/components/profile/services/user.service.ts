@@ -1,22 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { PostModel} from "../model/post.model";
+import {UserModel} from "../model/user.model";
 
-const baseUrl = 'http://localhost:3000/Posts';
+const baseUrl = 'http://localhost:3000/user';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PostsServices {
-
+export class UserService{
   constructor(private http: HttpClient) { }
 
-  getAll(): Observable<PostModel[]> {
-    return this.http.get<PostModel[]>(baseUrl);
+  getAll(): Observable<UserModel[]> {
+    return this.http.get<UserModel[]>(baseUrl);
   }
 
-  get(id: any): Observable<PostModel> {
+  get(id: any): Observable<UserModel> {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
@@ -30,13 +29,5 @@ export class PostsServices {
 
   delete(id: any): Observable<any> {
     return this.http.delete(`${baseUrl}/${id}`);
-  }
-
-  findByTitle(title: any): Observable<PostModel[]> {
-    return this.http.get<PostModel[]>(`${baseUrl}?title=${title}`);
-  }
-
-  findByUser(id: any): Observable<PostModel[]> {
-    return this.http.get<PostModel[]>(`${baseUrl}?userId=${id}`);
   }
 }

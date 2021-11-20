@@ -23,6 +23,7 @@ import {AddBottomComponent} from "../components/generator/generator-bottom/pages
 import {AddFootWearComponent} from "../components/generator/generator-foot-wear/pages/add-foot-wear/add-foot-wear.component";
 import {ManagerComponent} from "../components/generator/generator-manager/pages/manager/manager.component";
 import {HomeComponent} from "../components/home/home.component";
+import {ProfileComponent} from "../components/profile/pages/profile/profile.component";
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -30,9 +31,9 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent,  },
   {path:'home',component:HomeComponent,
     children:[
-      {path:'posts',component:PostsManagerComponent},
-      {path:'post/:id',component:PostItemComponent},
-      {path:'add',component:AddPostComponent},
+      {path:'posts/:userId',component:PostsManagerComponent},
+      {path:'post/:userId/:id',component:PostItemComponent},
+      {path:'add/:userId',component:AddPostComponent},
       {path:'outfits',component:OutfitsManagerComponent},
       {path:'outfit/:id',component:OutfitsItemComponent},
       {path:'addOutfit',component:AddOutfitComponent},
@@ -49,7 +50,8 @@ const routes: Routes = [
       {path:'addTop', component:AddTopComponent},
       {path:'addBottom', component:AddBottomComponent},
       {path:'addFootWear', component:AddFootWearComponent},
-      {path:'manager',component:ManagerComponent}
+      {path:'manager',component:ManagerComponent},
+      {path:'profile',component:ProfileComponent}
     ]
   },
 

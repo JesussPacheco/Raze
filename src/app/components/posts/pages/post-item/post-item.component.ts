@@ -17,7 +17,7 @@ export class PostItemComponent implements OnInit {
   };
   message = '';
 
-  constructor(private postsServices: PostsServices, private route: ActivatedRoute, private router: Router) { }
+  constructor(private postsServices: PostsServices, public route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.message = '';

@@ -5,21 +5,24 @@
       "title": "t-shirt white",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "this t-shirt is fantastic",
-      "outfitId": 1
+      "outfitId": 1,
+      "userId": 1
     },
     {
       "id": 3,
       "title": "blue Jeans",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "the blue jeans are the best",
-      "outfitId": 3
+      "outfitId": 3,
+      "userId": 1
     },
     {
       "title": "shirt",
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "white shirt",
       "id": 4,
-      "outfitId": 2
+      "outfitId": 2,
+      "userId": 1
     },
     {
       "title": "exercises uniform",
@@ -250,6 +253,22 @@
       "bottomImage": "https://cdn.shopify.com/s/files/1/0135/9550/8793/products/abed39af-b051-404b-9f0f-41e09799c789_1024x.jpg?v=1626066954",
       "footWearImage": "https://cdn.shopify.com/s/files/1/0175/8496/products/color_black_1_elliot_balmoral_boots_1200x1200.jpg?v=1618340245",
       "id": 3
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "age": 21,
+      "email": "email@email.com",
+      "imgProfile": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+      "name": "Kevin",
+      "password": "password",
+      "premium": true,
+      "userType": "advised",
+      "username": "kevin",
+      "yearsExperience": 12,
+      "interestId": 1,
+      "professionId": 1
     }
   ]
 }
