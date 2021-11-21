@@ -30,6 +30,11 @@
 .full-width{
   width: 80%;
 }
+.message {
+  width: 80%;
+  margin: 10px;
+  justify-content: center;
+}
 
 .forgot-password{
   padding-left: 0;

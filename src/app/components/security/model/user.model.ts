@@ -6,7 +6,7 @@ export interface User {
   age: number;
   interestId: number;
   email: string;
-  //password?: string;
+  password: string;
   userType: string;
   yearsExperience?: number;
   professionId?: number;

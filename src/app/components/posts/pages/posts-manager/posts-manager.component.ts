@@ -25,6 +25,7 @@ export class PostsManagerComponent implements OnInit {
     imgProfile: "",
     interestId: 0,
     name: "",
+    password: "",
     roles: [],
     userType: "",
     username: ""
