@@ -53,7 +53,7 @@ export class AddPostComponent implements OnInit {
       userId: Number(this.currentUserId)
     };
 
-    this.postServices.create(data)
+    this.postServices.create(data,this.currentUserId)
       .subscribe(
         response => {
           console.log(response);

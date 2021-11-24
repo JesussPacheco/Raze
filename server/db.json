@@ -68,6 +68,12 @@
       "img": "https://images.squarespace-cdn.com/content/v1/579202971b631b5dbc741986/1539635078549-F3BADVCGGIC2I15L845U/sunglasses-woman-model-fall.jpg?format=750w",
       "description": "white t-shirt, blue shorts jeans , white sneakers and necklace",
       "typeId": 3
+    },
+    {
+      "name": "practice",
+      "img": "https://firebasestorage.googleapis.com/v0/b/openraze-cb5bb.appspot.com/o/outfits%2Fimage_1637724729092?alt=media&token=743f256f-eab2-4b27-bae1-9af1638cdbc5",
+      "description": "prueba1",
+      "id": 4
     }
   ],
   "Types": [
@@ -352,6 +358,16 @@
       "password": "aaaaaaaaaaaaaaa",
       "userType": "Advised",
       "id": 6
+    },
+    {
+      "name": "leonardo",
+      "username": "LeoGrau",
+      "age": 23,
+      "interestId": "1",
+      "email": "Leo@email.com",
+      "password": "1234",
+      "userType": "Advised",
+      "id": 7
     }
   ]
 }

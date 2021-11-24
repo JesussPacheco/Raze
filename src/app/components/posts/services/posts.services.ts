@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { PostModel} from "../model/post.model";
 
-const baseUrl = 'http://localhost:3000/Posts';
+const baseUrl = 'https://razeapp-tf1.herokuapp.com/api/v1/posts';
 
 @Injectable({
   providedIn: 'root'
@@ -20,8 +20,8 @@ export class PostsServices {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
-  create(data: any): Observable<any> {
-    return this.http.post(baseUrl, data);
+  create(data: any, userId:any): Observable<any> {
+    return this.http.post(`https://razeapp-tf1.herokuapp.com/api/v1/users/${userId}/posts`, data);
   }
 
   update(id: any, data: any): Observable<any> {

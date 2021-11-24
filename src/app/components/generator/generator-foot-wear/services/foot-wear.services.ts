@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {FootWearModel} from "../model/foot-wear.model";
 
-const baseUrl = 'http://localhost:3000/footwear';
+const baseUrl = 'https://razeapp-tf1.herokuapp.com/api/v1/footwear';
 
 @Injectable({
   providedIn: 'root'

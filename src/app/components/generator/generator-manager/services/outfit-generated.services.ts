@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {OutfitGeneratedModel} from "../model/outfit-generated.model";
 
-const baseUrl = 'http://localhost:3000/outfitgenerated';
+const baseUrl = 'https://razeapp-tf1.herokuapp.com/api/v1/outfitgenerated';
 
 @Injectable({
   providedIn: 'root'

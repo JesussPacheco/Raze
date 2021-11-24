@@ -83,7 +83,8 @@ export class RegisterComponent implements OnInit {
         interestId: this.registerForm.controls['interestId'].value,
         email: this.registerForm.controls['email'].value,
         password: this.registerForm.controls['password'].value,
-        userType: this.registerForm.controls['user_type'].value
+        userType: this.registerForm.controls['user_type'].value,
+        imgProfile:''
       }
     }
     else if (this.registerForm.controls['user_type'].value === 'Advisor'){
@@ -96,7 +97,7 @@ export class RegisterComponent implements OnInit {
         password: this.registerForm.controls['password'].value,
         userType: this.registerForm.controls['user_type'].value,
         yearsExperience: this.registerForm.controls['years_experience'].value,
-        //professionId: this.registerForm.controls['professionId'].value
+        imgProfile:''
       };
     }
 
